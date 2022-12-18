@@ -1,5 +1,6 @@
 <?php
-include_once 'Class.php';
+ require_once 'Class.php';
+use data\Mobil;
 
 // Membuat objek baru dari kelas 'Mobil' dengan mengisi parameter constructor
 // dengan nilai 'Toyota', 'Merah', dan 100000000

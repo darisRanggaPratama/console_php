@@ -1,4 +1,6 @@
 <?php
+namespace data;
+
 // Kelas dengan nama 'Mobil'
 class Mobil
 {
