@@ -57,8 +57,8 @@ class MobilSport extends Mobil
   // Method yang menggunakan method protected dari kelas parent
   public function cetakInfoSport()
   {
-    return "Merk mobil: " . $this->merk . "<br>Warna mobil: " . $this->warna . "<br>Harga mobil: " . $this->harga
-     . "<br>Diskon: " . $this->hitungDiskon() . "<br>Turbo: " . $this->turbo;
+    return "Merk mobil: " . $this->merk . "\rWarna mobil: " . $this->warna . "\rHarga mobil: " . $this->harga
+     . "\rDiskon: " . $this->hitungDiskon() . "\rTurbo: " . $this->turbo;
   }
 }
 
