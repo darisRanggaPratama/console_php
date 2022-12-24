@@ -9,9 +9,17 @@ class Mobil
   
   // Property dengan akses modifier private
   private $warna;
+
+
   
   // Property dengan akses modifier protected
   protected $harga;
+
+  // Getter
+    public function getWarna()
+    {
+        return $this->warna;
+    }
   
   // Konstruktor
   public function __construct($merk, $warna, $harga)
@@ -24,9 +32,10 @@ class Mobil
   // Method dengan akses modifier public
   public function cetakInfo()
   {
-    return "Merk mobil: " . $this->merk . "<br>Warna mobil: " . $this->warna . "<br>Harga mobil: " . $this->harga;
+    return "\r\nMerk mobil: " . $this->merk . "\r\nWarna mobil: " . $this->getWarna() .
+        "\r\nHarga mobil: " . $this->harga . "\r\n";
   }
-  
+
   // Method dengan akses modifier private
   private function hitungOngkosKirim()
   {
@@ -57,8 +66,7 @@ class MobilSport extends Mobil
   // Method yang menggunakan method protected dari kelas parent
   public function cetakInfoSport()
   {
-    return "Merk mobil: " . $this->merk . "\rWarna mobil: " . $this->warna . "\rHarga mobil: " . $this->harga
-     . "\rDiskon: " . $this->hitungDiskon() . "\rTurbo: " . $this->turbo;
+    return $this->cetakInfo() . "\rTurbo: " . $this->turbo;
   }
 }
 
