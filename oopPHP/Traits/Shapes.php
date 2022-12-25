@@ -25,7 +25,7 @@ trait OverloadTrait
 // Trait kedua dengan method yang akan di-override
 trait OverrideTrait
 {
-    public function lingkaran(float $jari): float
+    final public function lingkaran(float $jari): float
     {
         echo "\r\nLingkaran. Jari-jari: $jari. Luas: ";
         return (22.0 / 7.0) * $jari * $jari;
@@ -40,7 +40,7 @@ class HitungDimensi
         lingkaran as luas;
     }
 
-    public function lingkaran(float $jari)
+    final public function lingkaran(float $jari): float
     {
         echo $this->luas($jari);
         echo "\r\nBola. Jari-jari: $jari. Volume: ";
@@ -48,10 +48,5 @@ class HitungDimensi
     }
 }
 
-$dim = new HitungDimensi();
 
-echo $dim->lingkaran(20.0);
-echo $dim->luasLingkaran(20);
-echo $dim->tabung(6.0);
-echo $dim->tabung(6.0, 7.0);
 
