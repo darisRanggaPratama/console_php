@@ -43,7 +43,7 @@ class AngkaTahun extends DepresiasiAktiva
         echo "\r\n";
         $aset = (float)readline("Nilai Aset: ");
         $residu = (float)readline("Nilai Akhir: ");
-        $umur = (int)readline("Umur Ekonomis ");
+        $umur = (int)readline("Umur Ekonomis: ");
         $this->depAngkaTahun($aset, $residu, $umur);
         echo "\r\n";
         return 0;
