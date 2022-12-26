@@ -49,6 +49,7 @@ class AngkaTahun extends DepresiasiAktiva
         return 0;
     }
 
+    // Private Method
     private function depAngkaTahun(float $aset, float $residu, int $umur): void
     {
         if ($aset < 1 || $residu < 0 || $umur < 1) {
