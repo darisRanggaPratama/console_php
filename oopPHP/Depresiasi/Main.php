@@ -2,5 +2,5 @@
 require_once 'DepresiasiAktiva.php';
 use DeprAngkaTahun\AngkaTahun;
 
-$dep = new AngkaTahun("mesin", "Angka Tahun");
+$dep = new AngkaTahun("mesin", "AngkaTahun");
 echo $dep->depresiasi();
