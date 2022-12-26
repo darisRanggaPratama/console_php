@@ -19,6 +19,12 @@ class AngkaTahun extends DepresiasiAktiva
         $this->metode = $metode;
     }
 
+    // Destructor
+    public function __destruct()
+    {
+        echo "\r\nPerhitungan Aset: $this->nama Selesai";
+    }
+
     // Enkapsulasi: Getter
     private function getNama(): string
     {
