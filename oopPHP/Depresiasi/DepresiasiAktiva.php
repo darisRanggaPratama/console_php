@@ -55,7 +55,7 @@ class AngkaTahun extends DepresiasiAktiva
 
             $angka = ((1.0 + $waktu) / 2.0) * $waktu;
             $y = 0;
-            echo "\r\nThn   Hitung            Depresiasi/Thn   Beban Depresiasi\r\n";
+            echo "\r\nThn   Hitung              Depresiasi/Thn   Beban Depresiasi\r\n";
 
             for ($x = $waktu; $x > 0; $x--) {
                 $y++;
