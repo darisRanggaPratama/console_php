@@ -29,7 +29,7 @@ class Mobil
     }
 
     // Method dengan akses modifier public
-    final public function cetakInfo(): string
+    public function cetakInfo(): string
     {
         return "\r\nMerk mobil: " . $this->merk . "\r\nWarna mobil: " . $this->getWarna() .
             "\r\nHarga mobil: " . $this->harga . "\r\n"
@@ -64,9 +64,10 @@ class MobilSport extends Mobil
     }
 
     // Method yang menggunakan method protected dari kelas parent
-    final  public function cetakInfoSport(): string
+    // Method Overriding
+    final public function cetakInfo(): string
     {
-        return $this->cetakInfo() . "\rTurbo: " . $this->turbo . "\r\n";
+        return parent::cetakInfo() . "\rTurbo: " . $this->turbo . "\r\n";
     }
 }
 

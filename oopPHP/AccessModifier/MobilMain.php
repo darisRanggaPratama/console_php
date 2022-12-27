@@ -16,4 +16,4 @@ $mobilSport = new MobilSport("Lamborghini", "Hitam", 300000000, true);
 
 var_dump($mobilSport);
 // Mencetak info mobil sport
-echo $mobilSport->cetakInfoSport();
+echo $mobilSport->cetakInfo();
