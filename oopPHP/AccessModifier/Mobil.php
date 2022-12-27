@@ -6,22 +6,22 @@ namespace Vehicle;
 class Mobil
 {
     // Property dengan akses modifier public
-    public $merk;
+    public string $merk;
 
     // Property dengan akses modifier private
-    private $warna;
+    private string $warna;
 
     // Property dengan akses modifier protected
-    protected $harga;
+    protected float $harga;
 
     // Getter
-    public function getWarna(): string
+   final public function getWarna(): string
     {
         return $this->warna;
     }
 
     // Konstruktor
-    public function __construct($merk, $warna, $harga)
+    public function __construct(string $merk, string $warna, int $harga)
     {
         $this->merk = $merk;
         $this->warna = $warna;
@@ -29,7 +29,7 @@ class Mobil
     }
 
     // Method dengan akses modifier public
-    public function cetakInfo(): string
+    final public function cetakInfo(): string
     {
         return "\r\nMerk mobil: " . $this->merk . "\r\nWarna mobil: " . $this->getWarna() .
             "\r\nHarga mobil: " . $this->harga . "\r\n"
@@ -37,13 +37,13 @@ class Mobil
     }
 
     // Method dengan akses modifier private
-    private function hitungOngkosKirim(): string
+   private function hitungOngkosKirim(): string
     {
         return "Biaya kirim: " . $this->harga * 0.1;
     }
 
     // Method dengan akses modifier protected
-    protected function hitungDiskon(): string
+   final protected function hitungDiskon(): string
     {
         return "Diskon: " . $this->harga * 0.2;
     }
@@ -53,10 +53,10 @@ class Mobil
 class MobilSport extends Mobil
 {
     // Property tambahan
-    public $turbo;
+    public string $turbo;
 
     // Konstruktor
-    public function __construct($merk, $warna, $harga, $turbo)
+    public function __construct(string $merk, string $warna, int $harga, bool $turbo)
     {
         // Memanggil konstruktor dari kelas parent
         parent::__construct($merk, $warna, $harga);
@@ -64,7 +64,7 @@ class MobilSport extends Mobil
     }
 
     // Method yang menggunakan method protected dari kelas parent
-    public function cetakInfoSport(): string
+    final  public function cetakInfoSport(): string
     {
         return $this->cetakInfo() . "\rTurbo: " . $this->turbo . "\r\n";
     }

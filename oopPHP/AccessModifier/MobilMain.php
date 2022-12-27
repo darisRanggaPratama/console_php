@@ -12,7 +12,7 @@ var_dump($mobil);
 echo $mobil->cetakInfo();
 
 // Menciptakan objek dari kelas MobilSport
-$mobilSport = new MobilSport("Lamborghini", "Hitam", 300000000, "Ya");
+$mobilSport = new MobilSport("Lamborghini", "Hitam", 300000000, true);
 
 var_dump($mobilSport);
 // Mencetak info mobil sport
