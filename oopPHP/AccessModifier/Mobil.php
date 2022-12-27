@@ -59,14 +59,17 @@ class MobilSport extends Mobil
     public function __construct(string $merk, string $warna, int $harga, bool $turbo)
     {
         // Memanggil konstruktor dari kelas parent
+        // :: <- Symbol static
         parent::__construct($merk, $warna, $harga);
         $this->turbo = $turbo;
     }
 
     // Method yang menggunakan method protected dari kelas parent
     // Method Overriding
+    // :: <- Symbol static
     final public function cetakInfo(): string
     {
+        // parent::cetakInfo() <- Ambil Method cetakInfo() dari kelas parent (mobil)
         return parent::cetakInfo() . "\rTurbo: " . $this->turbo . "\r\n";
     }
 }
