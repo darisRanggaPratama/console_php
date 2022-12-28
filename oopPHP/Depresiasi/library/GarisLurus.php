@@ -1,4 +1,5 @@
 <?php
+
 class GarisLurus extends DepresiasiAktiva
 {
     // Enkapsulasi: Private variable
@@ -50,15 +51,19 @@ class GarisLurus extends DepresiasiAktiva
             echo "\r\n Aset: " . $this->getNama();
             echo "\r\n Metode: " . $this->getMetode();
 
-            $nominal = abs($aset); $saldo = abs($residu);
-            $dsrHitung = $nominal - $saldo; $waktu = abs($umur);
+            $nominal = abs($aset);
+            $saldo = abs($residu);
+            $dsrHitung = $nominal - $saldo;
+            $waktu = abs($umur);
 
-            $y = 0; $sisa = 0;
+            $y = 0;
+            $sisa = 0;
             echo "\r\n Thn   Hitung              Depresiasi/Thn   Beban Depresiasi\r\n";
 
             for ($x = 1; $x <= $waktu; $x++) {
                 $y++;
-                $susut = $dsrHitung / $waktu; $sisa = $sisa + $susut;
+                $susut = $dsrHitung / $waktu;
+                $sisa = $sisa + $susut;
 
                 $txtDsrHitung = number_format($dsrHitung, 2, ",", ".");
                 $txtSusut = number_format($susut, 2, ",", ".");
