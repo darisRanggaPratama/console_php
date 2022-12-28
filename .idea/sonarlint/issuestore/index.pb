@@ -37,3 +37,9 @@ M
 oopPHP/Abstrak/ParentMain.php,b\9\b9ec46e85bff3826d3a74a285f5689832a9d1dbd
 I
 oopPHP/Static/Pesawat.php,f\3\f3c4b98f3f993f6060cc55a15cdf0565ccc88d31
+S
+#oopPHP/AccessModifier/MobilMain.php,b\7\b7eb20f0b4eaf934c3b5a99408e02e27e715cd7c
+L
+oopPHP/Constructor/Motor.php,4\7\47cf58559dca3b7fdb8c94a922b0b6327509095f
+O
+oopPHP/AccessModifier/Mobil.php,a\0\a05d9ec62e4af108c1b9bca5b9dca4d684d4b77d
