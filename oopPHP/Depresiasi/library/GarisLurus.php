@@ -1,5 +1,5 @@
 <?php
-class AngkaTahun extends DepresiasiAktiva
+class GarisLurus extends DepresiasiAktiva
 {
     // Enkapsulasi: Private variable
     private string $nama;
@@ -36,13 +36,13 @@ class AngkaTahun extends DepresiasiAktiva
         $aset = (float)readline(" Nilai Aset: ");
         $residu = (float)readline(" Nilai Akhir: ");
         $umur = (int)readline(" Umur Ekonomis: ");
-        $this->depAngkaTahun($aset, $residu, $umur);
+        $this->depGarisLurus($aset, $residu, $umur);
         echo "\r\n";
         return 0;
     }
 
     // Private Method
-    private function depAngkaTahun(float $aset, float $residu, int $umur): void
+    private function depGarisLurus(float $aset, float $residu, int $umur): void
     {
         if ($aset < 1 || $residu < 0 || $umur < 1) {
             echo "\r\n Input Salah. Nominal: $aset. Residu: $residu. Masa: $umur";
@@ -50,29 +50,26 @@ class AngkaTahun extends DepresiasiAktiva
             echo "\r\n Aset: " . $this->getNama();
             echo "\r\n Metode: " . $this->getMetode();
 
-            $nominal = abs($aset);
-            $saldo = abs($residu);
-            $dsrHitung = $nominal - $saldo;
-            $waktu = abs($umur);
+            $nominal = abs($aset); $saldo = abs($residu);
+            $dsrHitung = $nominal - $saldo; $waktu = abs($umur);
 
-            $angka = ((1.0 + $waktu) / 2.0) * $waktu;
-            $y = 0;
+            $y = 0; $sisa = 0;
             echo "\r\n Thn   Hitung              Depresiasi/Thn   Beban Depresiasi\r\n";
 
-            for ($x = $waktu; $x > 0; $x--) {
+            for ($x = 1; $x <= $waktu; $x++) {
                 $y++;
-                $rate = ($x) / $angka;
-                $susut = $rate * $dsrHitung;
-                $sisa = $dsrHitung - $susut;
+                $susut = $dsrHitung / $waktu;
+                $sisa = $sisa + $susut;
 
                 $txtDsrHitung = number_format($dsrHitung, 2, ",", ".");
                 $txtSusut = number_format($susut, 2, ",", ".");
                 $txtSisa = number_format($sisa, 2, ",", ".");
 
-                $text = "\r\n $y  $x / $angka x $txtDsrHitung = $txtSusut | $txtSisa";
+                $text = "\r\n $y  $txtDsrHitung / $waktu = $txtSusut | $txtSisa";
                 echo $text;
             }
         }
     }
 }
+
 

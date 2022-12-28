@@ -1,5 +1,6 @@
 <?php
 
+// namespace salah satu teknik Encapsulation
 namespace Vehicle;
 
 // Kelas dasar
