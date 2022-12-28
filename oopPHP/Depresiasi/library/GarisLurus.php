@@ -58,7 +58,7 @@ class GarisLurus extends DepresiasiAktiva
 
             $y = 0;
             $sisa = 0;
-            echo "\r\n Thn   Hitung              Depresiasi/Thn   Beban Depresiasi\r\n";
+            echo "\r\n Thn   Hitung              Depresiasi/Thn   Akumulasi Depresiasi\r\n";
 
             for ($x = 1; $x <= $waktu; $x++) {
                 $y++;
