@@ -1,11 +1,4 @@
 <?php
-
-namespace DeprAngkaTahun;
-
-require_once 'Depreciation.php';
-
-use Depresiasi\DepresiasiAktiva;
-
 class AngkaTahun extends DepresiasiAktiva
 {
     // Enkapsulasi: Private variable

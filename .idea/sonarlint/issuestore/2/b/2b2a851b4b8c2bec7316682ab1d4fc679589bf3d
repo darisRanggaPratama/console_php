@@ -1,0 +1,14 @@
+
+R	php:S1808"=Move this open curly brace to the beginning of the next line.(ŸÏîš
+W	php:S1808
+"=Move this open curly brace to the beginning of the next line.(ÚÉÝšûÿÿÿÿ
+Q	php:S1808"=Move this open curly brace to the beginning of the next line.(¾èÿ
+W	php:S1808"=Move this open curly brace to the beginning of the next line.(ƒ¸ŠÄúÿÿÿÿ
+d	php:S1808
+"JPut one space between the closing parenthesis and the opening curly brace.(ÚÉÝšûÿÿÿÿ
+^	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(¾èÿ
+d	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(ƒ¸ŠÄúÿÿÿÿ
+†	php:S1186
+"lAdd a nested comment explaining why this method is empty, throw an Exception or complete the implementation.(ÚÉÝšûÿÿÿÿ
+€	php:S1186"lAdd a nested comment explaining why this method is empty, throw an Exception or complete the implementation.(¾èÿ
+†	php:S1186"lAdd a nested comment explaining why this method is empty, throw an Exception or complete the implementation.(ƒ¸ŠÄúÿÿÿÿ
