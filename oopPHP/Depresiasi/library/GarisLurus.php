@@ -58,8 +58,7 @@ class GarisLurus extends DepresiasiAktiva
 
             for ($x = 1; $x <= $waktu; $x++) {
                 $y++;
-                $susut = $dsrHitung / $waktu;
-                $sisa = $sisa + $susut;
+                $susut = $dsrHitung / $waktu; $sisa = $sisa + $susut;
 
                 $txtDsrHitung = number_format($dsrHitung, 2, ",", ".");
                 $txtSusut = number_format($susut, 2, ",", ".");
