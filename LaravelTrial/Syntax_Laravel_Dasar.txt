@@ -1,1 +1,18 @@
 composer create-project laravel/laravel=9.1.5 trial-laravel(nama folder)
+
+// cek menu/ fitur
+php artisan 
+
+// Jalankan mode development
+php artisan serve
+// Jalankan mode development di folder public
+php -S localhost:8000
+
+// Cek fitur/ fasilitas
+php artisan serve --help
+
+// Ganti Port
+php artisan serve --port=9090
+
+// Membuat Unit Test
+php artisan make:test --help
