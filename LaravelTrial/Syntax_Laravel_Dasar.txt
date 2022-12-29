@@ -16,3 +16,10 @@ php artisan serve --port=9090
 
 // Membuat Unit Test
 php artisan make:test --help
+
+// Test Environment
+php artisan make:test EnvironmentTest
+
+
+PHPUnit is not configured. To fix it configure autoload file or path to PHPUnit phar for 'Local' configuration
+
