@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings load_method="PHPUNIT_PHAR" custom_loader_path="$PROJECT_DIR$/LaravelTrial/trial-laravel/vendor/bin/phpunit" phpunit_phar_path="$PROJECT_DIR$/LaravelTrial/trial-laravel/phpunit.phar" />
+    </phpunit_settings>
+  </component>
 </project>
