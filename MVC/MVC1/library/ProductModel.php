@@ -16,25 +16,28 @@ class ProductModel
         $this->description = $description;
     }
 
-    final public function getID(): string
+    public function getID(): string
     {
         echo "\r\n ID: ";
         return $this->id;
     }
 
-    final public function getName(): string
+
+
+
+    public function getName(): string
     {
         echo "\r\n Nama Produk: ";
         return $this->name;
     }
 
-    final public function getPrice(): int
+    public function getPrice(): int
     {
         echo "\r\n Harga Produk: ";
         return $this->price;
     }
 
-    final public function getDescription(): string
+    public function getDescription(): string
     {
         echo "\r\n Keterangan: ";
         return $this->description;

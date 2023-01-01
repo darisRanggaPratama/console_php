@@ -3,7 +3,7 @@ namespace library;
 
 class ProductController
 {
-    final public function view(string $id = '0'): void
+    public function view(string $id = '0'): void
     {
         // retrieve product from database
         if ($id == '1') {
