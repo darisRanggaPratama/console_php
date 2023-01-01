@@ -1,4 +1,6 @@
 <?php
+namespace library;
+
 class ProductModel
 {
     private string $id;
@@ -20,21 +22,21 @@ class ProductModel
         return $this->id;
     }
 
-  final public function getName(): string
-  {
-      echo "\r\n Nama Produk: ";
+    final public function getName(): string
+    {
+        echo "\r\n Nama Produk: ";
         return $this->name;
     }
 
-   final public function getPrice(): int
-   {
-       echo "\r\n Harga Produk: ";
+    final public function getPrice(): int
+    {
+        echo "\r\n Harga Produk: ";
         return $this->price;
     }
 
-   final public function getDescription(): string
-   {
-       echo "\r\n Keterangan: ";
+    final public function getDescription(): string
+    {
+        echo "\r\n Keterangan: ";
         return $this->description;
     }
 }

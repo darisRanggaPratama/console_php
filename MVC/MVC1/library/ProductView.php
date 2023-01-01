@@ -1,3 +1,4 @@
+<?php namespace library; ?>
 <html>
 <head>
     <title>Product</title>
