@@ -60,7 +60,12 @@ table {
 
         // Tampilkan data dalam bentuk baris & kolom
         while ($data = mysqli_fetch_assoc($hasil)) {
-            echo "<tr><td> $data[tglA] </td> <td> $data[tglB] </td> <td> $data[selisihTgl] </td></tr>";
+            echo "
+            <tr>
+            <td> $data[tglA] </td>
+            <td> $data[tglB] </td>
+            <td> $data[selisihTgl] </td>
+            </tr>";
         }
         ?>
     </table>
