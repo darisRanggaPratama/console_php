@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My Modern Web</title>
+    <style>
+      /* CSS untuk mengatur layout */
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+      }
+      main {
+        flex: 1;
+      }
+      nav {
+        width: 200px;
+        height: 100%;
+        background-color: #333;
+        color: #fff;
+        position: fixed;
+        top: 0;
+        left: -200px;
+        transition: left 0.3s;
+      }
+      nav.open {
+        left: 0;
+      }
+      /* CSS untuk mengatur desain visual */
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      nav li {
+        border-bottom: 1px solid #444;
+      }
+      nav a {
+        display: block;
+        padding: 10px 15px;
+        color: #fff;
+        text-decoration: none;
+      }
+      nav a:hover {
+        background-color: #444;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      /* CSS lainnya */
+      /* ... */
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Konten utama -->
+
+    <main>
+      <table>
+        <tr>
+          <td><h1>Welcome to My Modern Web</h1></td>
+          <td><button>Menu</button></td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at
+              ex vel neque finibus convallis. Sed auctor congue mauris, quis
+              ullamcorper arcu pretium a. Fusce ac lacinia metus. Ut placerat,
+              ligula at tempus feugiat, eros orci porta augue, nec aliquet justo
+              leo eu nibh. Proin pretium eros diam, quis interdum lacus posuere
+              in. Suspendisse id nulla quam. Maecenas congue tellus vel urna
+              viverra, vel efficitur lectus blandit. Sed vel ultricies ligula,
+              non volutpat orci. Duis volutpat tellus at leo venenatis, quis
+              blandit sem ultricies. Curabitur eleifend dui a dui suscipit
+              faucibus. Vestibulum viverra elementum mauris, eu tincidunt leo
+              elementum in. Nulla varius felis in est cursus, non
+            </p>
+          </td>
+        </tr>
+      </table>
+    </main>
+  </body>
+  <script>
+    // Mendapatkan referensi elemen sidebar dan tombol toggle
+    var sidebar = document.querySelector("nav");
+    var toggleBtn = document.querySelector("button");
+
+    // Menambahkan event listener untuk tombol toggle
+    toggleBtn.addEventListener("click", function () {
+      // Membalikkan kelas "open" pada elemen sidebar
+      sidebar.classList.toggle("open");
+    });
+  </script>
+</html>
