@@ -11,7 +11,6 @@ $data = mysqli_fetch_array($hasil);
 
 echo "Selish hari antar tanggal\r\n
 $data[tglA] s/d $data[tglB] adalah $data[selisihTgl] hari\r\n";
-echo "Selish hari antar tanggal <br>
-$data[tglA] s/d $data[tglB] adalah $data[selisihTgl] hari";
+
 
 echo "\r\n\r\n";
