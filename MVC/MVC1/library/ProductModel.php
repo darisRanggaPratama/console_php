@@ -22,9 +22,6 @@ class ProductModel
         return $this->id;
     }
 
-
-
-
     public function getName(): string
     {
         echo "\r\n Nama Produk: ";
