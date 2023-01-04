@@ -21,8 +21,8 @@ $products = new ProductView();
     <title>MVC</title>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <?php require_once "./view/utils/navbar.utils.php"; ?>
+<!-- Navigation Bar -->
+<?php require_once "./view/utils/navbar.utils.php"; ?>
 
 <!-- Mencari Produk via URL -->
 <?php $products->find(); ?>
@@ -31,15 +31,14 @@ $products = new ProductView();
 <table>
     <caption></caption>
     <tr>
-        <th>NO</th>
-        <th>Awal</th>
-        <th>Akhir</th>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>PRICE</th>
+        <th>STOCK</th>
     </tr>
     <?php $products->show(); ?>
 </table>
-    
-
-    
+<!-- FOOTER -->
 </body>
 </html>
-// Menit 4
+
