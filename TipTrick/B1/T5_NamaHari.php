@@ -66,6 +66,10 @@
         // Query database
         $hasil = mysqli_query($connect, $sql);
 
+        // Translate hari
+        $translate = ["Sunday"=>"Minggu", "Monday"=>"Senin","Tuesday"=>"Selasa", "Wednesday"=>"Rabu",
+        "Thursday"=>"Kamis", "Friday"=>"Jum'at", "Saturday"=>"Sabtu"];
+
         // Tampilkan data dalam bentuk baris & kolom
         $x = 0;
         while ($data = mysqli_fetch_assoc($hasil)) {
@@ -73,52 +77,22 @@
             $selisihA = $data['hariA'];
             $slshA = mktime(0, 0, 0, date("m"), date("d") + $selisihA, date("Y"));
             $dayA = date("l", $slshA);
+            $day_A = $translate[$dayA];
 
             $selisihB = $data['hariB'];
             $slshB = mktime(0, 0, 0, date("m"), date("d") + $selisihB, date("Y"));
             $dayB = date("l", $slshB);
-
-            if ($dayA == "Sunday") {
-                $dayA = "Minggu";
-            } elseif ($dayA == "Monday") {
-                $dayA = "Senin";
-            } elseif ($dayA == "Tuesday") {
-                $dayA = "Selasa";
-            } elseif ($dayA == "Wednesday") {
-                $dayA = "Rabu";
-            } elseif ($dayA == "Thursday") {
-                $dayA = "Kamis";
-            } elseif ($dayA == "Friday") {
-                $dayA = "Jum'at";
-            } elseif ($dayA == "Saturday") {
-                $dayA = "Sabtu";
-            }
-
-            if ($dayB == "Sunday") {
-                $dayB = "Minggu";
-            } elseif ($dayB == "Monday") {
-                $dayB = "Senin";
-            } elseif ($dayB == "Tuesday") {
-                $dayB = "Selasa";
-            } elseif ($dayB == "Wednesday") {
-                $dayB = "Rabu";
-            } elseif ($dayB == "Thursday") {
-                $dayB = "Kamis";
-            } elseif ($dayB == "Friday") {
-                $dayB = "Jum'at";
-            } elseif ($dayB == "Saturday") {
-                $dayB = "Sabtu";
-            }
+            $day_B = $translate[$dayB];
 
             echo  "
             <tr>
             <td> $x </td>
             <td> $data[tglA] </td>
             <td> $data[hariA] </td>
-            <td> $dayA </td>
+            <td> $day_A </td>
             <td> $data[tglB] </td>
             <td> $data[hariB] </td>
-            <td> $dayB </td>
+            <td> $day_B </td>
             </tr>";
         }
         ?>
