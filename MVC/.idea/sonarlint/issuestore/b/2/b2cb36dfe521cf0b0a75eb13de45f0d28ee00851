@@ -1,0 +1,6 @@
+
+W	php:S1808"=Move this open curly brace to the beginning of the next line.(¡à÷çÿÿÿÿÿ
+d	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(¡à÷çÿÿÿÿÿ
+\	php:S1808"GPut one space between this "while" keyword and the opening parenthesis.(Ê¬¶ž
+I	php:S1109"/Move this closing curly brace to the next line.(ª™ÆÉýÿÿÿÿ
+?php:S125"Remove this commented out code.(®Ù¬×üÿÿÿÿ8Øµæí×0

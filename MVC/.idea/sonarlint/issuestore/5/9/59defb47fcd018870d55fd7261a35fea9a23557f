@@ -1,0 +1,8 @@
+
+W	php:S1808"=Move this open curly brace to the beginning of the next line.(ÛëÏ¬úÿÿÿÿ
+R	php:S1808	"=Move this open curly brace to the beginning of the next line.(ê®îû
+d	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(ÛëÏ¬úÿÿÿÿ
+_	php:S1808	"JPut one space between the closing parenthesis and the opening curly brace.(ê®îû
+d	php:S1808
+"JPut one space between the closing parenthesis and the opening curly brace.( ¼ïüÿÿÿÿ
+I	php:S3801	"4Refactor this function to use "return" consistently.(ê®îû
