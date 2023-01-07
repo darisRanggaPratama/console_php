@@ -23,7 +23,6 @@ while ($data = mysqli_fetch_array($result)) {
     $txtBruto = number_format($data['bruto'], 0, ",", ".");
     $txtTrf = number_format($data['trf'], 0, ",", ".");
 
-
     echo "<tr>";
     echo "<td>" . $data['bln'] . "</td>";
     echo "<td>" . $txtGaji . "</td>";
