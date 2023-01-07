@@ -1,16 +1,19 @@
 <?php
-require_once "koneksi.php";
 require_once "model.php";
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Gaji Tahun 2022</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-
+    <title>Gaji Tahun 2022</title>
 </head>
 <body>
+<p align="center">
+    <object data="view.php" height="600" width="700">
+        Your browser doesn’t support the object tag.
+    </object>
+</p>
+
 <canvas id="myChart"></canvas>
 <script>
     setTimeout(function () {
@@ -78,7 +81,7 @@ require_once "model.php";
                     {
                         id: 'y-axis-1',
                         type: 'linear',
-                        position: 'left',
+                        position: 'right',
                         ticks: {
                             beginAtZero: true
                         }
@@ -102,7 +105,7 @@ require_once "model.php";
                     {
                         id: 'y-axis-4',
                         type: 'linear',
-                        position: 'right',
+                        position: 'left',
                         ticks: {
                             beginAtZero: true
                         }

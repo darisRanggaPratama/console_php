@@ -11,14 +11,15 @@ $data6 = array();
 
 
 // Iterasi setiap baris dari hasil query
-while ($row = mysqli_fetch_assoc($result)) {
+while ($row = mysqli_fetch_assoc($result))
+{
     // Tambahkan data ke array
-    $data1[] = $row['gaji'];
-    $data2[] = $row['lembur'];
-    $data3[] = $row['tj_lain'];
-    $data4[] = $row['bruto'];
-    $data5[] = $row['trf'];
-    $data6[] = $row['bln'];
+$data1[] = $row['gaji'];
+$data2[] = $row['lembur'];
+$data3[] = $row['tj_lain'];
+$data4[] = $row['bruto'];
+$data5[] = $row['trf'];
+$data6[] = $row['bln'];
 }
 
 // Encode array ke format JSON
@@ -28,4 +29,5 @@ $data3 = json_encode($data3);
 $data4 = json_encode($data4);
 $data5 = json_encode($data5);
 $data6 = json_encode($data6);
+
 ?>
