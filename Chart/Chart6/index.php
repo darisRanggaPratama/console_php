@@ -6,7 +6,7 @@ require_once "model.php";
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Multi Axis Line Chart</title>
+    <title>Gaji Tahun 2022</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 
 </head>

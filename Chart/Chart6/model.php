@@ -10,7 +10,6 @@ $data5 = array();
 $data6 = array();
 
 
-
 // Iterasi setiap baris dari hasil query
 while ($row = mysqli_fetch_assoc($result)) {
     // Tambahkan data ke array
