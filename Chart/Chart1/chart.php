@@ -1,11 +1,11 @@
 <?php
 require_once "koneksi.php";
 
-$sql = $connect->prepare('SELECT * FROM kota ORDER BY jumlah DESC');
+$sql = $connect->prepare('SELECT * FROM kota ORDER BY atlit DESC');
 $sql->execute();
 while($data=$sql->fetch(PDO::FETCH_ASSOC)){
     extract($data);
-    $json[]=[(string)$kota, (int)$jumlah ];
+    $json[]=[(string)$kota, (int)$jumlah];
 }
 echo json_encode($json);
 

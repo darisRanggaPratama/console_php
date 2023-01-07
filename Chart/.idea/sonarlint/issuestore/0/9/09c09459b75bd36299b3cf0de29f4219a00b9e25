@@ -1,0 +1,5 @@
+
+d	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(ÃØ·Ÿÿÿÿÿÿ
+a	php:S1808"GPut one space between this "while" keyword and the opening parenthesis.(ÃØ·Ÿÿÿÿÿÿ
+7	php:S1780"Remove this closing tag "?>".(Ö‘äÏúÿÿÿÿ
+k	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(ûÔÑ…øÿÿÿÿ
