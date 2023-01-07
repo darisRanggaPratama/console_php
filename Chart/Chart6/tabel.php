@@ -17,13 +17,20 @@ echo "<tbody>";
 
 // Menampilkan data dari tabel MySQL ke tabel HTML
 while ($data = mysqli_fetch_array($result)) {
+    $txtGaji = number_format($data['gaji'], 0, ",", ".");
+    $txtLembur = number_format($data['lembur'], 0, ",", ".");
+    $txtTjLain = number_format($data['tj_lain'], 0, ",", ".");
+    $txtBruto = number_format($data['bruto'], 0, ",", ".");
+    $txtTrf = number_format($data['trf'], 0, ",", ".");
+
+
     echo "<tr>";
     echo "<td>" . $data['bln'] . "</td>";
-    echo "<td>" . $data['gaji'] . "</td>";
-    echo "<td>" . $data['lembur'] . "</td>";
-    echo "<td>" . $data['tj_lain'] . "</td>";
-    echo "<td>" . $data['bruto'] . "</td>";
-    echo "<td>" . $data['trf'] . "</td>";
+    echo "<td>" . $txtGaji . "</td>";
+    echo "<td>" . $txtLembur . "</td>";
+    echo "<td>" . $txtTjLain . "</td>";
+    echo "<td>" . $txtBruto . "</td>";
+    echo "<td>" . $txtTrf . "</td>";
     echo "</tr>";
 }
 
