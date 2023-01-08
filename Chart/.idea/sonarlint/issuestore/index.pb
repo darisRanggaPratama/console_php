@@ -22,3 +22,13 @@ B
 Chart2/index.php,f\a\faf6322206482b805b32da8ea0059676ab1d86fc
 @
 Chart6/style.css,3\f\3fc4722934c73daa1be81b4c76b9eeeb5d554d76
+B
+Chart6/koneksi.php,e\5\e510a77c09b1217ded0c7c6aa3eaa2a3cbd4d2f3
+@
+Chart6/model.php,1\e\1e025cbf553a9f3a9b450cc87719f508252c2b47
+@
+Chart6/tabel.php,d\8\d897d594693dd61ea109a92465842153f1289c26
+?
+Chart6/view.php,b\2\b28ee3db4e5eaf51ad65211fdd3eb1f6592f0954
+@
+Chart6/index.php,f\3\f3d8d3d5e38d6131e9a307a556113c5d55c3d791

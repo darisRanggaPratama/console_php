@@ -1,0 +1,4 @@
+
+U	php:S1808";Move this open curly brace to the end of the previous line.(ÒÌâ–øÿÿÿÿ
+7	php:S1780!"Remove this closing tag "?>".(Ö‘äÏúÿÿÿÿ
+k	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(ûÔÑ…øÿÿÿÿ
