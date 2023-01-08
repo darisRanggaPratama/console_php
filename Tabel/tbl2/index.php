@@ -75,13 +75,13 @@
 <body>
 <p style="text-align:center">
     <h1 style="text-align:center">Gaji Ayang Beib 2022</h1>
-    <object data="grafik.php" height="360px" width="100%">
+    <object data="grafik.php" height="330px" width="100%">
         Your browser doesn’t support the object tag.
     </object>
 </p>
 
 <table id="dg" title="Data Master" class="easyui-datagrid" url="getData.php" toolbar="#toolbar" pagination="true"
-       rownumbers="true" fitColumns="true" singleSelect="true" style="width:100%;height:350px;">
+       rownumbers="true" fitColumns="true" singleSelect="true" style="width:100%;height:330px;">
     <thead>
     <tr>
         <th field="bln" width="5">Bulan</th>
