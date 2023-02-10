@@ -3,10 +3,15 @@
 
 <head>
     <title>Login</title>
+    <style>
+  .center {
+    text-align: center;
+  }
+</style>
 </head>
 
-<body>
-    <center>
+<body class="center">
+    
         <form action="loginController.php" method="POST" style="margin-top: 200px;">
             <h1>Login</h1>
             <label>Username :</label>
@@ -27,7 +32,7 @@
                 <?php echo $_GET['pesan']; ?>
             </label>
         <?php }  ?>
-    </center>
+    
 </body>
 
 </html>
