@@ -2,7 +2,7 @@
 require_once "model.php";
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <title>Gaji Tahun 2022</title>
