@@ -1,6 +1,15 @@
+<?php
+session_start();
+
+if ($_SESSION['status'] != "sudah_login") {
+        header("location:login.php");
+    }
+?>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<title>Data Gaji 2022</title>
     <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
     <script type="text/javascript" src="easyui/jquery.min.js"></script>
@@ -70,11 +79,28 @@
             }
         }
     </script>
-    <title>Data Gaji 2022</title>
+      <style>
+  .center {
+    text-align: center;
+  }
+
+    .narrow {
+        width: "5";
+    }
+
+    .wide{
+        width: "10";
+    }
+  
+</style>
+   
 </head>
 <body>
-<p style="text-align:center">
-    <h1 style="text-align:center">Gaji Ayang Beib 2022</h1>
+<h1>Urra! Selamat datang : <?php echo $_SESSION['nama']; ?></h1>
+        <br>
+        <a href="logout.php">Logout</a>
+<p class = "center">
+    <h1 class = "center">Gaji Ayang Beib 2022</h1>
     <object data="grafik.php" height="330px" width="100%">
         Your browser doesn’t support the object tag.
     </object>
@@ -82,14 +108,17 @@
 
 <table id="dg" title="Data Master" class="easyui-datagrid" url="getData.php" toolbar="#toolbar" pagination="true"
        rownumbers="true" fitColumns="true" singleSelect="true" style="width:100%;height:330px;">
+       <caption>
+        Data Gaji
+       </caption>
     <thead>
     <tr>
-        <th field="bln" width="5">Bulan</th>
-        <th field="gaji" width="10">Gaji</th>
-        <th field="lembur" width="10">Lembur</th>
-        <th field="tj_lain" width="10">Tj_lain</th>
-        <th field="bruto" width="10">Bruto</th>
-        <th field="trf" width="10">Transfer</th>
+        <th field="bln" class="narrow">Bulan</th>
+        <th field="gaji" class="wide">Gaji</th>
+        <th field="lembur" class="wide">Lembur</th>
+        <th field="tj_lain" class="wide">Tj_lain</th>
+        <th field="bruto" class="wide">Bruto</th>
+        <th field="trf" class="wide">Transfer</th>
     </tr>
     </thead>
 </table>
