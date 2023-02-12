@@ -1,0 +1,10 @@
+
+\	php:S1131"@Remove the useless trailing whitespaces at the end of this line.(Ž¶ÀÒ8þ»ÛŠÙ0
+D	php:S1808"/Remove all space after the opening parenthesis.(îÝÒù
+_	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(­ïã
+_	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(¬Ôê
+Y	php:S1808"DPut one space between this "if" keyword and the opening parenthesis.(îÝÒù
+Y	php:S1808"DPut one space between this "if" keyword and the opening parenthesis.(¬Ôê
+[	php:S1808"FPut one space between this "else" keyword and the opening curly brace.(å¥ž‡
+7	php:S1780!"Remove this closing tag "?>".(Ö‘äÏúÿÿÿÿ
+k	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(¯ßŽ—ýÿÿÿÿ

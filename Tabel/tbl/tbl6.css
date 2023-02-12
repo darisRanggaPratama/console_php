@@ -1,0 +1,15 @@
+#submit-btn {
+  background-color: blue;
+  color: white;
+}
+#submit-btn:hover {
+  background-color: navy;
+}
+#data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#data-table th, #data-table td {
+  border: 1px solid black;
+  padding: 8px;
+}

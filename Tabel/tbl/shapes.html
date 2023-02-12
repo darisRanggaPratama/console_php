@@ -1,0 +1,65 @@
+<html>
+<head>
+<style>
+.shapes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid green;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: blue;
+}
+
+.oval {
+  width: 50px;
+  height: 25px;
+  border-radius: 25px/12.5px;
+  background-color: yellow;
+}
+
+.cuboid {
+  width: 50px;
+  height: 50px;
+  depth: 50px;
+  background-color: orange;
+  transform: rotateX(45deg) rotateY(45deg);
+}
+
+.cube {
+  width: 50px;
+  height: 50px;
+  background-color: purple;
+  transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg);
+}
+
+</style>
+</head>
+<body>
+<div class="shapes">
+  <div class="square"></div>
+  <div class="triangle"></div>
+  <div class="circle"></div>
+  <div class="oval"></div>
+  <div class="cuboid"></div>
+  <div class="cube"></div>
+</div>
+
+</body>
+</html>
