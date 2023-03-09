@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-if ($_SESSION['status'] != "sudah_login")
-    {
+if ($_SESSION['status'] != "sudah_login") {
         header("location:login.php");
     }
 ?>
