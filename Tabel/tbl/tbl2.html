@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Dynamic Table</title>
+    <script>
+        function generateTable() {
+            // get input values
+            var rows = document.getElementById("rows").value;
+            var cols = document.getElementById("cols").value;
+			        // create table element
+        var table = document.createElement("table");
+        table.classList.add("table", "table-striped");
+
+        // create table head
+        var thead = document.createElement("thead");
+        var headRow = document.createElement("tr");
+        for (var i = 0; i < cols; i++) {
+            var headCell = document.createElement("th");
+            headCell.innerHTML = "Header " + (i+1);
+            headRow.appendChild(headCell);
+        }
+        thead.appendChild(headRow);
+        table.appendChild(thead);
+
+        // create table body
+        var tbody = document.createElement("tbody");
+        for (var i = 0; i < rows; i++) {
+            var bodyRow = document.createElement("tr");
+            for (var j = 0; j < cols; j++) {
+                var bodyCell = document.createElement("td");
+                bodyCell.innerHTML = "Row " + (i+1) + ", Cell " + (j+1);
+                bodyRow.appendChild(bodyCell);
+            }
+            tbody.appendChild(bodyRow);
+        }
+        table.appendChild(tbody);
+
+        // add table to the page
+        var container = document.getElementById("table-container");
+        container.innerHTML = "";
+        container.appendChild(table);
+    }
+</script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label for="rows">Enter number of rows:</label>
+            <input type="number" class="form-control" id="rows">
+        </div>
+        <div class="form-group">
+            <label for="cols">Enter number of columns:</label>
+            <input type="number" class="form-control" id="cols">
+        </div>
+        <button onclick="generateTable()" class="btn btn-primary">Generate Table</button>
+        <div id="table-container"></div>
+    </div>
+</body>
+</html>

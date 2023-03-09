@@ -1,0 +1,12 @@
+
+fphp:S103"KSplit this 155 characters long line (which is greater than 120 authorized).(’²8ΖΨ‹Ω0
+D	php:S1808"/Remove all space after the opening parenthesis.(ξέÒω
+_	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(­ογ
+_	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(Ϊη‘·
+_	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(‘²Ά
+Y	php:S1808"DPut one space between this "if" keyword and the opening parenthesis.(ξέÒω
+Y	php:S1808"DPut one space between this "if" keyword and the opening parenthesis.(Ϊη‘·
+Y	php:S1808"DPut one space between this "if" keyword and the opening parenthesis.(‘²Ά
+[	php:S1808"FPut one space between this "else" keyword and the opening curly brace.(ε¥‡
+7	php:S1780$"Remove this closing tag "?>".(Φ‘δΟϊÿÿÿÿ
+k	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(―ί—ύÿÿÿÿ

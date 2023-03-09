@@ -1,0 +1,8 @@
+
+_	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(Úç‘·
+d	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(Ó–´ÿýÿÿÿÿ
+Y	php:S1808"DPut one space between this "if" keyword and the opening parenthesis.(Úç‘·
+^	php:S1808"DPut one space between this "if" keyword and the opening parenthesis.(Ó–´ÿýÿÿÿÿ
+7	php:S1780"Remove this closing tag "?>".(Ö‘äÏúÿÿÿÿ
+k	php:S4833
+"QReplace "require_once" with namespace import mechanism through the "use" keyword.(¯ßŽ—ýÿÿÿÿ

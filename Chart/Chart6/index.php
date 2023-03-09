@@ -1,6 +1,15 @@
 <?php
 require_once "model.php";
 ?>
+
+<?php
+session_start();
+
+if ($_SESSION['status'] != "sudah_login") {
+        header("location:login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +17,9 @@ require_once "model.php";
     <title>Gaji Tahun 2022</title>
 </head>
 <body>
+<h1>Urra! Selamat datang : <?php echo $_SESSION['nama']; ?></h1>
+        <br>
+        <a href="logout.php">Logout</a>
 <p align="center">
     <object data="view.php" height="600" width="700">
         Your browser doesn’t support the object tag.
