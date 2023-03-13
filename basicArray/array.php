@@ -12,9 +12,8 @@ while (count($array) < 11) {
 // Tampilkan nilainya
 echo "1. Array: \n";
 foreach ($array as $value) {
-    // echo $value . "\n";
-    var_dump($array);
-    var_dump($value);
+    echo $value . "\n";
+   
 }
 
 echo "\nArray: Index & Value: \n";
