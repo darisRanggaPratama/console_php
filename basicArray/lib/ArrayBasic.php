@@ -1,5 +1,13 @@
 <?php
-/* 1. Buat array dengan tipe data numerik berkapasitas 11 elemen yang diisi nilai random
+namespace ArrayTest;
+
+class ArrayBasic
+{
+  public static $array;
+
+   public function __construct()
+  {
+   /* 1. Buat array dengan tipe data numerik berkapasitas 11 elemen yang diisi nilai random
 berkisar antara 0 sampai dengan 21 dimana menolak elemen yang bernilai sama */
 $array = array();
 while (count($array) < 11) {
@@ -10,11 +18,10 @@ while (count($array) < 11) {
 }
 
 // Tampilkan nilainya
-echo "1. Array: \n";
+echo "Array: \n";
 foreach ($array as $value) {
-    // echo $value . "\n";
-    var_dump($array);
-    var_dump($value);
+    echo $value . "\n";
+   
 }
 
 echo "\nArray: Index & Value: \n";
@@ -91,4 +98,5 @@ echo "\nArray: Index & Value: \n";
 for ($i = 0; $i < count($array); $i++) {
     echo "$i $array[$i] \n";
 }
-?>
+  }
+}
