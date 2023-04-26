@@ -2,7 +2,7 @@
 session_start();
 
 if ($_SESSION['status'] != "sudah_login") {
-    header("location:login.php");
+    header("location:index.php");
 }
 
 ?>
@@ -98,7 +98,7 @@ if ($_SESSION['status'] != "sudah_login") {
     <p class="center">
     <h1 class="center">Gaji Ayang Beib 2022</h1>
     <object data="grafik.php" height="330px" width="100%">
-        Your browser doesn’t support the object tag.
+        Your browser does not support the object tag.
     </object>
     </p>
 
@@ -111,12 +111,13 @@ if ($_SESSION['status'] != "sudah_login") {
         </caption>
         <thead>
             <tr>
-                <th field="bln" style="width:15%">Bulan</th>
+                <th field="bln" style="width:10%">Bulan</th>
                 <th field="gaji" style="width:16%">Gaji</th>
                 <th field="lembur" style="width:16%">Lembur</th>
                 <th field="tj_lain" style="width:16%">Tj_lain</th>
                 <th field="bruto" style="width:16%">Bruto</th>
                 <th field="trf" style="width:16%">Transfer</th>
+                <th field="hmn" style="width:10%">Human</th>
             </tr>
         </thead>
     </table>
@@ -158,6 +159,9 @@ if ($_SESSION['status'] != "sudah_login") {
             </div>
             <div style="margin-bottom:10px">
                 <input name="trf" class="easyui-textbox" required="true" label="Transfer:" style="width:100%">
+            </div>
+            <div style="margin-bottom:10px">
+                <input name="hmn" class="easyui-textbox" required="true" label="Human:" style="width:100%">
             </div>
         </form>
     </div>

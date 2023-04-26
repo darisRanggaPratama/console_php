@@ -1,5 +1,5 @@
 <?php
-require_once "koneksi.php";
+require_once "connect.php";
 // Membuat tabel HTML
 echo "<table class='table table-striped'>";
 echo "<caption><h1>Gaji PT Ayang Tahun 2022</h1></caption>";
@@ -37,6 +37,6 @@ echo "</tbody>";
 echo "</table>";
 
 // Menutup koneksi ke database
-mysqli_close($conn);
+mysqli_close($connect);
 ?>
 
