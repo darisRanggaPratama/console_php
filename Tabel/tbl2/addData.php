@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+
+if ($_SESSION['status'] != "sudah_login") {
+    header("location:index.php");
+}
+
 $response = array(
     'status' => 0,
     'msg' => 'Some problems occurred, please try again.'

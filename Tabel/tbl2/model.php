@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if ($_SESSION['status'] != "sudah_login") {
+    header("location:index.php");
+}
+
 require_once "connect.php";
 
 // Inisialisasi array untuk menampung data
