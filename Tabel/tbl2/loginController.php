@@ -22,7 +22,7 @@ if ($cek > 0) {
     $_SESSION['id_login'] = $data['id'];
     header('location:main.php');
 } else {
-    header('location:login.php?pesan=gagal login data tidak ditemukan');
+    header('location:login.php?pesan=gagal_login_data_tidak_ditemukan');
 }
 
 // https://gilacoding.com/read/tutorial-singkat-login-dengan-php-7-terbaru
