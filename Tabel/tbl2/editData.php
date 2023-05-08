@@ -9,6 +9,7 @@ $response = array(
     'status' => 0,
     'msg' => 'Some problems occurred, please try again.'
 );
+
 if (!empty($_REQUEST['kode']) && !empty($_REQUEST['bln']) && !empty($_REQUEST['gaji'])
 && !empty($_REQUEST['lembur']) && !empty($_REQUEST['tj_lain']) && !empty($_REQUEST['bruto'])
 && !empty($_REQUEST['trf']) && !empty($_REQUEST['hmn'])) {
