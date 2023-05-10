@@ -8,7 +8,7 @@ $nama_bln = "";
 $total = null;
 
 //Query SQL
-$sql = "SELECT bln FROM me_pst";
+$sql = "SELECT bln FROM gaji22";
 $hasil = mysqli_query($koneksi, $sql);
 
 while ($data = mysqli_fetch_array($hasil)) {
@@ -18,7 +18,7 @@ while ($data = mysqli_fetch_array($hasil)) {
 }
 
 //Query SQL
-$sql1 = "SELECT gaji FROM me_pst";
+$sql1 = "SELECT gaji FROM gaji22";
 $hasil1 = mysqli_query($koneksi, $sql1);
 
 while ($data = mysqli_fetch_array($hasil1)) {
@@ -75,7 +75,13 @@ while ($data = mysqli_fetch_array($hasil1)) {
                     'rgba(255, 206, 86, 0.2)',
                     'rgba(75, 192, 192, 0.2)',
                     'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(171, 178, 185, 0.2)',
+                    'rgba(142, 68, 173, 0.2) ',
+                    'rgba(248, 196, 113, 0.2)',
+                    'rgba(22, 160, 133, 0.2)',
+                    'rgba(148, 49, 38, 0.2)',
+                    'rgba(151, 154, 154, 0.2)'
                 ],
                 borderColor: [
                     'rgba(255, 99, 132, 1)',
@@ -83,7 +89,13 @@ while ($data = mysqli_fetch_array($hasil1)) {
                     'rgba(255, 206, 86, 1)',
                     'rgba(75, 192, 192, 1)',
                     'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(171, 178, 185,1)',
+                    'rgba(142, 68, 173, 1)',
+                    'rgba(248, 196, 113, 1)',
+                    'rgba(22, 160, 133, 1)',
+                    'rgba(148, 49, 38, 1)',
+                    'rgba(151, 154, 154, 1)'
                 ],
                 borderWidth: 1
             }]
@@ -109,13 +121,19 @@ while ($data = mysqli_fetch_array($hasil1)) {
             datasets: [{
                 label: 'Data Gaji 2023',
                 data: [<?php echo $total; ?>],
-                backgroundColor: [
+                backgroundColor: [                    
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
                     'rgba(255, 206, 86, 0.2)',
                     'rgba(75, 192, 192, 0.2)',
                     'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(171, 178, 185, 0.2)',
+                    'rgba(142, 68, 173, 0.2) ',
+                    'rgba(248, 196, 113, 0.2)',
+                    'rgba(22, 160, 133, 0.2)',
+                    'rgba(148, 49, 38, 0.2)',
+                    'rgba(151, 154, 154, 0.2)'
                 ],
                 borderColor: [
                     'rgba(255, 99, 132, 1)',
@@ -123,7 +141,13 @@ while ($data = mysqli_fetch_array($hasil1)) {
                     'rgba(255, 206, 86, 1)',
                     'rgba(75, 192, 192, 1)',
                     'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(171, 178, 185,1)',
+                    'rgba(142, 68, 173, 1)',
+                    'rgba(248, 196, 113, 1)',
+                    'rgba(22, 160, 133, 1)',
+                    'rgba(148, 49, 38, 1)',
+                    'rgba(151, 154, 154, 1)'
                 ],
                 borderWidth: 1
             }]
