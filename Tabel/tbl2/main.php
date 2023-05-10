@@ -2,7 +2,7 @@
 session_start();
 
 if ($_SESSION['status'] != "sudah_login") {
-    header("location:login.php");
+    header("location:index.php");
 }
 
 ?>
@@ -14,6 +14,7 @@ if ($_SESSION['status'] != "sudah_login") {
     <title>Data Gaji 2022</title>
     <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="personal.css">
     <script type="text/javascript" src="easyui/jquery.min.js"></script>
     <script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
     <script type="text/javascript">
@@ -22,7 +23,6 @@ if ($_SESSION['status'] != "sudah_login") {
                 term: $('#term').val()
             });
         }
-
         var url;
 
         function newData() {
@@ -92,81 +92,102 @@ if ($_SESSION['status'] != "sudah_login") {
 </head>
 
 <body>
-    <h1>Urra! Selamat datang : <?php echo $_SESSION['nama']; ?></h1>
-    <br>
-    <a href="logout.php">Logout</a>
-    <p class="center">
-    <h1 class="center">Gaji Ayang Beib 2022</h1>
-    <object data="grafik.php" height="330px" width="100%">
-        Your browser doesn’t support the object tag.
-    </object>
-    </p>
+    <div class="sidebar" id="mySidebar">
+        <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">✘</a>
+        <a>.:MENU:.</a>
+        <a href="logout.php">Logout</a>
+        <a>Gaji 2023</a>
+        <a>Gaji 2024</a>
+    </div>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ Malea Energy</button>
+        <div class="content">
 
-    <table
-    id="dg" title="Data Master" class="easyui-datagrid" url="getData.php"
-    toolbar="#toolbar" pagination="true" rownumbers="true" fitColumns="true"
-    singleSelect="true" style="width:100%;height:330px;">
-        <caption>
-            Data Gaji
-        </caption>
-        <thead>
-            <tr>
-                <th field="bln" style="width:15%">Bulan</th>
-                <th field="gaji" style="width:16%">Gaji</th>
-                <th field="lembur" style="width:16%">Lembur</th>
-                <th field="tj_lain" style="width:16%">Tj_lain</th>
-                <th field="bruto" style="width:16%">Bruto</th>
-                <th field="trf" style="width:16%">Transfer</th>
-            </tr>
-        </thead>
-    </table>
-    <div id="toolbar">
-        <div id="tb">
-            <input id="term" placeholder="Type keywords...">
-            <a href="javascript:void(0);" class="easyui-linkbutton" plain="true" onclick="doSearch()">Search</a>
+            <h4>Urra! Selamat datang : <?php echo $_SESSION['nama']; ?></h4>
+            <br>
+            <p class="center">
+            <h1 class="center">Anggaran Gaji Tahun 2023</h1>
+            <object data="grafik.php" height="940px" width="100%">
+                Your browser does not support the object tag.
+            </object>
+            </p>
+
+            <table id="dg" title="Data Master" class="easyui-datagrid" url="getData.php" toolbar="#toolbar"
+            pagination="true" rownumbers="true" fitColumns="true" singleSelect="true" style="width:100%;height:300px;">
+                <caption>
+                    Data Gaji
+                </caption>
+                <thead>
+                    <tr>
+                        <th field="bln" style="width:10%">Bulan</th>
+                        <th field="gaji" style="width:16%">Gaji</th>
+                        <th field="lembur" style="width:16%">Lembur</th>
+                        <th field="tj_lain" style="width:16%">Tj_lain</th>
+                        <th field="bruto" style="width:16%">Bruto</th>
+                        <th field="trf" style="width:16%">Transfer</th>
+                        <th field="hmn" style="width:10%">Human</th>
+                    </tr>
+                </thead>
+            </table>
+            <div id="toolbar">
+                <div id="tb">
+                    <input id="term" placeholder="Type keywords...">
+                    <a href="javascript:void(0);" class="easyui-linkbutton" plain="true" onclick="doSearch()">Search</a>
+                </div>
+                <div id="tb2" style="">
+                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add"
+                    plain="true" onclick="newData()">New Data</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit"
+                    plain="true" onclick="editData()">Edit Data</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove"
+                    plain="true" onclick="destroyData()">Remove Data</a>
+                </div>
+            </div>
+            <div id="dlg" class="easyui-dialog" style="width:450px"
+            data-options="closed:true,modal:true,border:'thin',buttons:'#dlg-buttons'">
+                <form id="fm" method="post" novalidate style="margin:0;padding:20px 50px">
+                    <h3>Please Input</h3>
+                    <div style="margin-bottom:10px">
+                        <input name="kode" class="easyui-textbox" required="true" label="Kode:" style="width:100%">
+                    </div>
+                    <div style="margin-bottom:10px">
+                        <input name="bln" class="easyui-textbox" required="true" label="Bulan:" style="width:100%">
+                    </div>
+                    <div style="margin-bottom:10px">
+                        <input name="gaji" class="easyui-textbox" required="true" label="Gaji:" style="width:100%">
+                    </div>
+                    <div style="margin-bottom:10px">
+                        <input name="lembur" class="easyui-textbox" required="true" label="Lembur:" style="width:100%">
+                    </div>
+                    <div style="margin-bottom:10px">
+                        <input name="tj_lain" class="easyui-textbox" required="true" label="Tj. Lain:"
+                        style="width:100%">
+                    </div>
+                    <div style="margin-bottom:10px">
+                        <input name="bruto" class="easyui-textbox" required="true" label="Bruto:" style="width:100%">
+                    </div>
+                    <div style="margin-bottom:10px">
+                        <input name="trf" class="easyui-textbox" required="true" label="Transfer:" style="width:100%">
+                    </div>
+                    <div style="margin-bottom:10px">
+                        <input name="hmn" class="easyui-textbox" required="true" label="Human:" style="width:100%">
+                    </div>
+                </form>
+            </div>
+            <div id="dlg-buttons">
+                <a href="javascript:void(0);" class="easyui-linkbutton c6" iconCls="icon-ok"
+                onclick="saveData()" style="width:90px;">Save</a>
+                <a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-cancel"
+                onclick="javascript:$('#dlg').dialog('close');" style="width:90px;">Cancel</a>
+            </div>
+
+            <object data="view.php" height="500px" width="100%">
+                Your browser does not support the object tag.
+            </object>
+
         </div>
-        <div id="tb2" style="">
-            <a href="javascript:void(0)" class="easyui-linkbutton"
-            iconCls="icon-add" plain="true" onclick="newData()">New Data</a>
-            <a href="javascript:void(0)" class="easyui-linkbutton"
-            iconCls="icon-edit" plain="true" onclick="editData()">Edit Data</a>
-            <a href="javascript:void(0)" class="easyui-linkbutton"
-            iconCls="icon-remove" plain="true" onclick="destroyData()">Remove Data</a>
-        </div>
     </div>
-    <div id="dlg" class="easyui-dialog" style="width:450px"
-    data-options="closed:true,modal:true,border:'thin',buttons:'#dlg-buttons'">
-        <form id="fm" method="post" novalidate style="margin:0;padding:20px 50px">
-            <h3>Please Input</h3>
-            <div style="margin-bottom:10px">
-                <input name="kode" class="easyui-textbox" required="true" label="Kode:" style="width:100%">
-            </div>
-            <div style="margin-bottom:10px">
-                <input name="bln" class="easyui-textbox" required="true" label="Bulan:" style="width:100%">
-            </div>
-            <div style="margin-bottom:10px">
-                <input name="gaji" class="easyui-textbox" required="true" label="Gaji:" style="width:100%">
-            </div>
-            <div style="margin-bottom:10px">
-                <input name="lembur" class="easyui-textbox" required="true" label="Lembur:" style="width:100%">
-            </div>
-            <div style="margin-bottom:10px">
-                <input name="tj_lain" class="easyui-textbox" required="true" label="Tj. Lain:" style="width:100%">
-            </div>
-            <div style="margin-bottom:10px">
-                <input name="bruto" class="easyui-textbox" required="true" label="Bruto:" style="width:100%">
-            </div>
-            <div style="margin-bottom:10px">
-                <input name="trf" class="easyui-textbox" required="true" label="Transfer:" style="width:100%">
-            </div>
-        </form>
-    </div>
-    <div id="dlg-buttons">
-        <a href="javascript:void(0);" class="easyui-linkbutton c6"
-        iconCls="icon-ok" onclick="saveData()" style="width:90px;">Save</a>
-        <a href="javascript:void(0);" class="easyui-linkbutton"
-        iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close');" style="width:90px;">Cancel</a>
-    </div>
+    <script type="text/javascript" src="./open_close_nav.js"></script>
 
 </body>
 

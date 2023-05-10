@@ -1,5 +1,6 @@
 <?php
 require_once "model.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,6 +62,14 @@ require_once "model.php";
                 borderColor: 'rgb(255,234,0)',
                 backgroundColor: 'rgba(255,238,91,0.2)',
                 pointRadius: 0
+            },
+            {
+                label: 'Human',
+                yAxisID: 'y-axis-5',
+                data: <?php echo $data7; ?>,
+                borderColor: 'rgb(138,43,226)',
+                backgroundColor: 'rgba(238,130,238,0.2)',
+                pointRadius: 0
             }
         ]
     };
@@ -106,6 +115,14 @@ require_once "model.php";
                     },
                     {
                         id: 'y-axis-5',
+                        type: 'linear',
+                        position: 'left',
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    },
+                    {
+                        id: 'y-axis-6',
                         type: 'linear',
                         position: 'right',
                         ticks: {

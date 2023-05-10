@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+
+if ($_SESSION['status'] != "sudah_login") {
+    header("location:index.php");
+}
+
 $response = array(
     'status' => 0,
     'msg' => 'Some problems occurred, please try again.'
@@ -14,11 +21,11 @@ if (!empty($_REQUEST['kode']) && !empty($_REQUEST['bln']) && !empty($_REQUEST['g
     $trf = $_REQUEST['trf'];
 
     // Include the database config file
-    require_once 'dbConnect.php';
+    require_once 'connect.php';
 
     $sql = "INSERT INTO gaji22(kode, bln, gaji, lembur, tj_lain, bruto, trf)
             VALUES ('$kode', '$bln', '$gaji', '$lembur', '$tj_lain', '$bruto', '$trf')";
-    $insert = $db->query($sql);
+    $insert = $connect->query($sql);
 
     if ($insert) {
         $response['status'] = 1;
