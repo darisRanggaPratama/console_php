@@ -17,29 +17,26 @@ $columns = array(
     4 => 'city',
 );
 
-// $query = mysqli_query($con, $sql);
-// $count_all_rows = mysqli_num_rows($query);
-
 if (isset($_POST['search']['value'])) {
     $search_value = $_POST['search']['value'];
-    $sql .= " WHERE username LIKE '%".$search_value."%' ";
-    $sql .= " OR email LIKE '%".$search_value."%' ";
-    $sql .= " OR mobile LIKE '%".$search_value."%' ";
-    $sql .= " OR city LIKE '%".$search_value."%' ";
+    $sql .= " WHERE username LIKE '%".$search_value."%'";
+    $sql .= " OR email LIKE '%".$search_value."%'";
+    $sql .= " OR mobile LIKE '%".$search_value."%'";
+    $sql .= " OR city LIKE '%".$search_value."%'";
 }
 
 if (isset($_POST['order'])) {
     $column_name = $_POST['order'][0]['column'];
     $order = $_POST['order'][0]['dir'];
-    $sql .= " ORDER BY '".$columns[$column_name]."' ".$order;
+    $sql .= " ORDER BY ".$columns[$column_name]." ".$order."";
 } else {
-    $sql .=" ORDER BY  id ASC";
+    $sql .= " ORDER BY  id ASC";
 }
 
 if ($_POST['length'] != -1) {
     $start = $_POST['start'];
     $length = $_POST['length'];
-    $sql .=" LIMIT ".$start.", ".$length;
+    $sql .= " LIMIT ".$start.", ".$length;
 }
 
 $data = array();
