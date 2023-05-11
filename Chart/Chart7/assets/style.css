@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #2E282A;
+    min-height: 100vh;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+h1{
+    margin: 46px;
+    font-size: 4em;
+}
+
+canvas{
+    max-width: 600px;
+    max-height: 600px;
+}
