@@ -1,5 +1,5 @@
 <?php
-$con  = mysqli_connect('localhost','rangga','rangga','test');
+$con  = mysqli_connect('localhost','rangga','rangga','datatable_db');
 if(mysqli_connect_errno())
 {
     echo 'Database Connection Error';
