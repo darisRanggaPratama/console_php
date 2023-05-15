@@ -20,7 +20,4 @@ echo "\ntelat: $index gapok: $gapok potong: ";
 return round($index * (($gapok/2) / 173));
 }
 
-
-
-
 ?>
