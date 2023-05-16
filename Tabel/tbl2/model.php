@@ -30,6 +30,10 @@ $data6[] = $row['bln'];
 $data7[] = $row['hmn'];
 }
 
+// Cek variable
+// print_r($data1);
+// var_dump($data1);
+
 // Encode array ke format JSON
 $data1 = json_encode($data1);
 $data2 = json_encode($data2);
@@ -38,4 +42,9 @@ $data4 = json_encode($data4);
 $data5 = json_encode($data5);
 $data6 = json_encode($data6);
 $data7 = json_encode($data7);
+
+// Cek variable
+//echo "\nprint_r".print_r($data1)."\n";
+//echo "\nvar_dump".var_dump($data1)."\n";
+// echo "\n".$data1."\n";
 ?>

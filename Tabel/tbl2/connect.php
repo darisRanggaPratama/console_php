@@ -14,6 +14,6 @@ if (!$connect) {
 }
 
 // Query untuk mengambil data dari tabel
-$query = "SELECT * FROM `gaji22` ORDER BY `id`";
+$query = "SELECT * FROM `me_pst` ORDER BY `id`";
 $result = mysqli_query($connect, $query);
 ?>
