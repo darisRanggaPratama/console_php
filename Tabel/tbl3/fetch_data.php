@@ -30,7 +30,7 @@ if (isset($_POST['order'])) {
     $order = $_POST['order'][0]['dir'];
     $sql .= " ORDER BY ".$columns[$column_name]." ".$order."";
 } else {
-    $sql .= " ORDER BY  id ASC";
+    $sql .= " ORDER BY id ASC";
 }
 
 if ($_POST['length'] != -1) {
