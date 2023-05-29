@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+    /* kode CSS disini... */
+  </style>
+</head>
+<body>
+  <div class="container mt-3">
+
+    <a class="btn btn-secondary" data-bs-toggle="offcanvas" href="#offcanvas1">
+    Backdrop False </a>
+    
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas1" 
+    data-bs-backdrop="false">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aliquid 
+          nemo sint dolor temporibus repellendus facere exercitationem minus magni.
+        </div>
+      </div>
+    </div>
+
+    <a class="btn btn-warning" data-bs-toggle="offcanvas" href="#offcanvas2"> 
+    Scroll True</a>
+    
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas2" 
+    data-bs-scroll="true">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aliquid 
+          nemo sint dolor temporibus repellendus facere exercitationem minus magni.
+        </div>
+      </div>
+    </div>
+
+
+    <a class="btn btn-danger" data-bs-toggle="offcanvas" href="#offcanvas3"> 
+    Backdrop False dan Scroll True </a>
+    
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas3" 
+    data-bs-backdrop="false" data-bs-scroll="true">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aliquid 
+          nemo sint dolor temporibus repellendus facere exercitationem minus magni.
+        </div>
+      </div>
+    </div>
+
+  <div style="margin-top: 1000px;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aliquid 
+    nemo sint dolor temporibus repellendus facere exercitationem minus magni.
+  </div>
+
+  </div>
+
+  <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

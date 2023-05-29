@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+    /* kode CSS disini... */      
+  </style>
+</head>
+<body>
+
+    <div class="container mt-3">
+
+      <form>
+
+        <div class="row mt-3">
+          <div class="col-8">
+            <label for="inputNama" class="form-label">Nama Lengkap</label>
+            <input type="text" class="form-control" id="inputNama"
+            placeholder="Nama Lengkap">
+          </div>
+
+          <div class="col-4">
+            <label for="inputPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword"
+            placeholder="Password">
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class=" form-group col-4">
+            <label for="selectProvinsi" class="form-label">Provinsi</label>
+            <select id="selectProvinsi" class="form-select">
+              <option selected>Pilih nama provinsi...</option>
+              <option>...</option>
+            </select>
+          </div>
+
+          <div class="col-4">
+            <label for="selectKota" class="form-label">Kota</label>
+            <select id="selectKota" class="form-select">
+              <option selected>Pilih nama kota...</option>
+              <option>...</option>
+            </select>
+          </div>
+
+          <div class="col-4">
+            <label for="selectKecamatan" class="form-label">Kecamatan</label>
+            <select id="selectKecamatan" class="form-select">
+              <option selected>Pilih nama kecamatan...</option>
+              <option>...</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-check mt-3">
+            <input class="form-check-input" type="checkbox" id="checkSyarat">
+            <label class="form-check-label" for="checkSyarat">
+              Saya setuju dengan syarat dan ketentuan
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">Daftar</button>
+        
+      </form>
+
+    </div>
+
+  <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
