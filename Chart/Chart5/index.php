@@ -9,17 +9,20 @@ $result = mysqli_query($conn, $query);
 // Inisialisasi array untuk menampung data
 $data1 = array();
 $data2 = array();
+$data3 = array();
 
 // Iterasi setiap baris dari hasil query
 while ($row = mysqli_fetch_assoc($result)) {
     // Tambahkan data ke array
     $data1[] = $row['atlit'];
     $data2[] = $row['jumlah'];
+    $data3[] = $row['kota'];
 }
 
 // Encode array ke format JSON
 $data1 = json_encode($data1);
 $data2 = json_encode($data2);
+$data3 = json_encode($data3);
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +44,7 @@ $data2 = json_encode($data2);
 
     // Buat data array untuk grafik
     var data = {
-        labels: ['Bekasi', 'Bogor', 'Depok', 'Jakarta', 'Tangerang'],
+        labels: <?php echo $data3; ?>, // ['Bekasi', 'Bogor', 'Depok', 'Jakarta', 'Tangerang'],
         datasets: [
             {
                 label: 'Atlit',
