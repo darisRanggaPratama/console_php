@@ -92,7 +92,7 @@ $data2 = json_encode($data2);
                         type: "line",
                         label: "Netto",
                         data: values2,
-                        lineTension: 0,
+                        lineTension: 0.1,
                         fill: true,
                         backgroundColor: 'rgba(255, 99, 132, 0.2)',
                         borderColor: 'rgba(255, 99, 132, 1)',
