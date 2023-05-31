@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+    /* kode CSS disini... */
+  </style>
+</head>
+<body>
+
+    <div class="container mt-3">
+
+      <div class="dropdown float-start me-3"">
+        <button class="btn btn-primary dropdown-toggle btn-lg" type="button"
+         data-bs-toggle="dropdown">Dropdown Big</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+          <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+          <a class="dropdown-item" href="#">Pilihan Menu 3</a>
+        </div>
+      </div>
+
+      <div class="dropdown float-start me-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button"
+         data-bs-toggle="dropdown">Dropdown Regular</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+          <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+          <a class="dropdown-item" href="#">Pilihan Menu 3</a>
+        </div>
+      </div>
+
+      <div class="btn-group float-start">
+        <button type="button" class="btn btn-info btn-sm">
+          Split Dropdown Small
+        </button>
+        <button class="btn btn-info dropdown-toggle dropdown-toggle-split btn-sm"
+        type="button" data-bs-toggle="dropdown">
+          <span class="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+          <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+          <a class="dropdown-item" href="#">Pilihan Menu 3</a>
+        </div>
+      </div>
+
+    </div>
+
+  <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

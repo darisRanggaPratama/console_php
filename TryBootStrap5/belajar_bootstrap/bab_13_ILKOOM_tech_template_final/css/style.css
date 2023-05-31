@@ -1,0 +1,47 @@
+/*-- NAVBAR --*/
+#main-navbar a{
+  border-bottom: 5px solid #f8f9fa;
+  text-transform: uppercase;
+}
+#main-navbar a:hover, #main-navbar .active{
+  border-bottom-color: black;
+  transition: border-color 500ms;
+}
+
+
+/*-- SHOWCASE --*/
+#showcase{
+  background: url('../img/showcase_bg.jpg');
+  height: 600px;
+  padding-top: 150px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+#showcase h1{
+  padding-top: 250px;
+}
+
+.dark-overlay{
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 600px;
+}
+
+
+/*-- PRODUCT --*/
+#product i[class^="bi"] {
+  font-size: 4rem;
+}
+
+
+/*-- Nonaktifkan XXL Breakpoint --*/
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1140px;
+  }
+}

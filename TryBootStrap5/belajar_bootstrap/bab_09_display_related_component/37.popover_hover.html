@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+    /* kode CSS disini... */
+  </style>
+</head>
+<body>
+    <div class="container mt-3">
+
+      <p>Silahkan hover
+        <mark tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover"
+        title="Popover title"
+        data-bs-content="Sebuah pesan interaktif dari popover Bootstrap">
+        text ini</mark> untuk menampilkan efek popover
+      </p>
+      
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script>
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+      })
+    </script>
+  </body>
+</html>

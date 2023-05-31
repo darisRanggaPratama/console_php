@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+    /* kode CSS disini... */
+  </style>
+</head>
+<body>
+    <div class="container mt-3">
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur
+        <abbr title="<i>Tooltips</i> <strong>pertama</strong>" data-bs-toggle="tooltip"
+         data-bs-html="true">adipisicing elit</abbr>.
+      </p>
+
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script>
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+    </script>
+  </body>
+</html>

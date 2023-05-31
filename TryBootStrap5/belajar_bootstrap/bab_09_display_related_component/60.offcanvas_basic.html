@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+    /* kode CSS disini... */
+  </style>
+</head>
+<body>
+  <div class="container mt-3">
+
+    <a class="btn btn-primary" data-bs-toggle="offcanvas" 
+    href="#offcanvasContoh"> Link dengan href </a>
+
+    <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" 
+    data-bs-target="#offcanvasContoh">Button dengan data-bs-target</button> -->
+    
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasContoh">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aliquid 
+          nemo sint dolor temporibus repellendus facere exercitationem minus magni.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

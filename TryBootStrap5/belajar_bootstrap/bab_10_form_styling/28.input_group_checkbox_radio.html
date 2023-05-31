@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+    /* kode CSS disini... */      
+  </style>
+</head>
+<body>
+
+  <div class="container mt-3">
+
+    <label class="form-label">Kirim Laporan</label>
+    <div class="input-group">
+      <div class="input-group-text">
+        <input type="checkbox" id="checkEmail" class="form-check-input">
+      </div>
+      <label for="checkEmail" class="input-group-text">Kirim ke Email:</label>
+      <input type="email" class="form-control" placeholder="Alamat email...">
+    </div>
+
+    <br>
+
+    <label class="form-label">Pilih Jurusan</label>
+    <div class="input-group">
+      <div class="input-group-text">
+        <input type="radio" name="jurusan" id="jurusanIlkom" class="form-check-input">
+      </div>
+      <label class="input-group-text" for="jurusanIlkom">Ilmu Komputer</label>
+      <input type="text" class="form-control" placeholder="Nama Universitas...">
+    </div>
+
+    <div class="input-group">
+      <div class="input-group-text">
+        <input type="radio" name="jurusan" id="jurusanTI" class="form-check-input">
+      </div>
+      <label class="input-group-text" for="jurusanTI">Teknik Informatika</label>
+      <input type="text" class="form-control" placeholder="Nama Universitas...">
+    </div>
+
+    <div class="input-group">
+      <div class="input-group-text">
+        <input type="radio" name="jurusan" id="jurusanSI" class="form-check-input">
+      </div>
+      <label class="input-group-text" for="jurusanSI">Sistem Informasi</label>
+      <input type="text" class="form-control" placeholder="Nama Universitas...">
+    </div>
+
+  </div>
+
+  <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

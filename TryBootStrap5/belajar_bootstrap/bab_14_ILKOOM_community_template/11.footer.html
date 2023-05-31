@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ILKOOM - Community Blog</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="main-navbar" class="navbar navbar-expand-md navbar-dark bg-dark py-0">
+    <div class="container">
+
+      <a class="navbar-brand" href="index.html">
+        <span class="d-none">ILKOOM</span>
+        <img src="img/ilkoom_logo.png" class="main-logo d-none d-md-inline"
+        alt="ilkoom logo">
+        <img src="img/ilkoom_logo.png" class="small-logo d-inline d-md-none"
+        alt="ilkoom logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link p-4 active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-4" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-4" href="article.html">Article</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-4" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-4" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SLIDER -->
+  <header id="main-slide">
+
+  <div id="mySlide" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#mySlide" data-bs-slide-to="0" 
+      class="active"></button>
+      <button type="button" data-bs-target="#mySlide" data-bs-slide-to="1">
+      </button>
+      <button type="button" data-bs-target="#mySlide" data-bs-slide-to="2">
+      </button>
+      <button type="button" data-bs-target="#mySlide" data-bs-slide-to="3">
+      </button>
+    </div>
+
+    <div class="carousel-inner text-white">
+      <div class="carousel-item active" id="slide1">
+        <div class="container">
+          <div class="d-none d-md-block">
+            <h1 class="display-1 bg-info px-4 pb-2 d-inline-block">
+              Get<strong> Inspired</strong>
+            </h1>
+            <br>
+            <p class="bg-dark px-2 pb-1 d-inline-block">Lorem ipsum dolor, sit
+              amet consectetur adipisicing elit. Aut cumque molestias asperiores
+              ipsam officiis? Doloremque.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" id="slide2">
+        <div class="container">
+          <div class="d-none d-md-block text-end">
+            <h1 class="display-1 bg-dark px-4 pb-2 d-inline-block">
+              Take<strong> Action</strong>
+            </h1>
+            <br>
+            <p class="bg-info px-2 pb-1 d-inline-block">Lorem ipsum dolor, sit
+              amet consectetur adipisicing elit. Aut cumque molestias asperiores
+              ipsam officiis? Doloremque.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" id="slide3">
+        <div class="container">
+          <div class="d-none d-md-block">
+            <h1 class="display-1 bg-info px-4 pb-2 d-inline-block">
+              Be<strong> Social</strong>
+            </h1>
+            <br>
+            <p class="bg-dark px-2 pb-1 d-inline-block">Lorem ipsum dolor, sit
+              amet consectetur adipisicing elit. Aut cumque molestias asperiores
+              ipsam officiis? Doloremque.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" id="slide4">
+        <div class="container">
+          <div class="d-none d-md-block text-end">
+            <h1 class="display-1 bg-dark px-4 pb-2 d-inline-block">
+              Find<strong> Stories</strong>
+            </h1>
+            <br>
+            <p class="bg-info px-2 pb-1 d-inline-block">Lorem ipsum dolor, sit
+              amet consectetur adipisicing elit. Aut cumque molestias asperiores
+              ipsam officiis? Doloremque.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#mySlide" 
+    data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mySlide" 
+    data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+  </header>
+
+  <!-- SHOWOFF 1 -->
+  <section id="showoff-1" class="text-muted py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="img/image1.jpg" alt="" class="img-fluid mb-3 img-thumbnail">
+        </div>
+        <div class="col-md-6">
+          <h2>Let's Build Community</h2>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Aperiam cumque, esse modi maxime veniam nulla delectus dolorem
+            inventore temporibus tempora!
+          </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+            vitae, velit fugiat magni neque consectetur incidunt perspiciatis cum
+            et sapiente eaque doloremque sequi. Vero et blanditiis velit dolor.</p>
+          <button class="btn btn-outline-info">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWOFF 2 -->
+  <section id="showoff-2" class="bg-light text-muted py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Find Solution for Every Problem</h2>
+          <p class="lead">Duis condimentum augue id magna semper rutrum. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum. Aenean fermentum risus id tortor.
+          </p>
+          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+            aut fugit, sed quia consequuntur magni dolores eos qui ratione
+            voluptatem sequi nesciunt. In sem justo, commodo ut, suscipit at,
+            pharetra vitae, orci.</p>
+          <button class="btn btn-outline-info mb-3">Learn More</button>
+        </div>
+        <div class="col-md-6">
+          <img src="img/image2.jpg" alt="" class="img-fluid mb-3 img-thumbnail">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPLORE -->
+  <section id="explore">
+    <div class="dark-overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <div class="py-5">
+              <h1 class="display-4">Explore</h1>
+              <p class="lead"> 
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Minus voluptate quam, rem possimus ut corrupti velit eaque 
+                odit assumenda ipsam fugiat soluta, in vero tenetur omnis 
+                at magni voluptatibus adipisci.
+              </p>
+              <a href="#" class="btn btn-outline-dark">Find Out More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIP SECTION -->
+  <section id="membership" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center" >
+          <h1>Membership Levels</h1>
+          <hr class="w-25 mx-auto">
+          <p class="lead">From individuals to large enterprises, our pricing
+            plans help learners access the depth and breadth of the expert
+            content they need to solve in-the-moment challenges or learn for
+            a lifetime. Compare and pick the option that’s right for you.</p>
+        </div>
+      </div>
+
+      <div class="row">
+
+       <div class="col-md-4 mt-4 ">
+        <div class="card text-center">
+          <div class="card-header bg-dark text-white">
+            <h3 class="pt-2">Premium 1 Month</h3>
+          </div>
+          <div class="card-body">
+            <p class="h5 text-danger"><s>Rp 200.000</s></p>
+            <h3 class="card-title"><strong>Rp. 150.000</strong></h3>
+            <p class="card-text">Cum sociis natoque penatibus et magnis
+              parturient montes, nascetur ridiculus mus.</p>
+            <hr class="w-75 mx-auto">
+            <ul class="list-unstyled text-start">
+             <li class="m-2 ms-3">
+              <i class="bi-check-circle-fill me-2"></i>View Site Activity
+             </li>
+             <li class="m-2 ms-3">
+              <i class="bi-check-circle-fill me-2"></i>View Members Directory
+             </li>
+             <li class="m-2 ms-3">
+              <i class="bi-check-circle-fill me-2"></i>Access to Groups Directory
+             </li>
+             <li class="m-2 ms-3">
+              <i class="bi-check-circle-fill me-2"></i>Premium Online Course
+             </li>
+             <li class="m-2 ms-3">
+              <i class="bi-check-circle-fill me-2"></i>Online and Phone Support
+             </li>
+            </ul>
+          </div>
+          <div class="card-footer text-muted d-flex ">
+            <a href="#" class="btn btn-info flex-grow-1">Register</a>
+          </div>
+        </div>
+       </div>
+
+       <div class="col-md-4 mt-4">
+        <div class="card text-center">
+          <div class="card-header bg-dark text-white">
+            <h3 class="pt-2">Premium 6 Month</h3>
+          </div>
+          <div class="card-body">
+            <p class="h5 text-danger"><s>Rp 1.200.000</s></p>
+            <h3 class="card-title"><strong>Rp. 750.000</strong></h3>
+            <p class="card-text">Class aptent taciti sociosqu ad torquent
+              conubia nostra, per inceptos hymenaeos.</p>
+            <hr class="w-75 mx-auto">
+            <ul class="list-unstyled text-start">
+             <li class="m-2 ms-3">
+              <i class="bi-check-circle-fill me-2"></i>View Site Activity
+             </li>
+             <li class="m-2 ms-3">
+              <i class="bi-check-circle-fill me-2"></i>View Members Directory
+             </li>
+             <li class="m-2 ms-3">
+              <i class="bi-check-circle-fill me-2"></i>Access to Groups Directory
+             </li>
+             <li class="m-2 ms-3">
+              <i class="bi-check-circle-fill me-2"></i>Premium Online Course
+             </li>
+             <li class="m-2 ms-3">
+              <i class="bi-check-circle-fill me-2"></i>Online and Phone Support
+             </li>
+            </ul>
+          </div>
+          <div class="card-footer text-muted d-flex ">
+            <a href="#" class="btn btn-info flex-grow-1">Register</a>
+          </div>
+        </div>
+       </div>
+
+       <div class="col-md-4 mt-4">
+        <div class="card text-center">
+          <div class="card-header bg-dark text-white">
+            <h3 class="pt-2">Premium 1 Year</h3>
+          </div>
+          <div class="card-body">
+            <p class="h5 text-danger"><s>Rp 2.400.000</s></p>
+            <h3 class="card-title"><strong>Rp. 1.300.000</strong></h3>
+            <p class="card-text">Morbi leo mi, nonummy eget tristique non,
+              rhoncus non leo. Aliquam erat volutpat.</p>
+            <hr class="w-75 mx-auto">
+            <ul class="list-unstyled text-start">
+             <li class="m-2 ms-3">
+              <i class="bi-check-circle-fill me-2"></i>View Site Activity
+             </li>
+             <li class="m-2 ms-3">
+              <i class="bi-check-circle-fill me-2"></i>View Members Directory
+             </li>
+             <li class="m-2 ms-3">
+              <i class="bi-check-circle-fill me-2"></i>Access to Groups Directory
+             </li>
+             <li class="m-2 ms-3">
+              <i class="bi-check-circle-fill me-2"></i>Premium Online Course
+             </li>
+             <li class="m-2 ms-3">
+              <i class="bi-check-circle-fill me-2"></i>Online and Phone Support
+             </li>
+            </ul>
+          </div>
+          <div class="card-footer text-muted d-flex ">
+            <a href="#" class="btn btn-info flex-grow-1">Register</a>
+          </div>
+        </div>
+       </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MEMBER SHOWCASE-->
+  <section id="member-showcase" class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center" >
+          <h1>Our Member</h1>
+          <hr class="w-25 mx-auto">
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Dignissimos, vitae!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <img src="img/people1.jpg" class="rounded-circle img-thumbnail m-2">
+          <img src="img/people2.jpg" class="rounded-circle img-thumbnail m-2">
+          <img src="img/people3.jpg" class="rounded-circle img-thumbnail m-2">
+          <img src="img/people4.jpg" class="rounded-circle img-thumbnail m-2">
+          <img src="img/people5.jpg" class="rounded-circle img-thumbnail m-2">
+          <img src="img/people6.jpg" class="rounded-circle img-thumbnail m-2">
+          <img src="img/people7.jpg" class="rounded-circle img-thumbnail m-2">
+          <img src="img/people8.jpg" class="rounded-circle img-thumbnail m-2">
+          <img src="img/people9.jpg" class="rounded-circle img-thumbnail m-2">
+          <img src="img/people10.jpg" class="rounded-circle img-thumbnail m-2">
+          <img src="img/people11.jpg" class="rounded-circle img-thumbnail m-2">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col text-center" >
+          <button class="btn btn-outline-info mx-auto">View More Member</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAID MEMBER FEATURE -->
+  <section id="feature" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center" >
+          <h1>Paid Membership Features</h1>
+          <hr class="w-25 mx-auto">
+          <p class="lead">Get benefit from our membership features</p>
+        </div>
+      </div>
+      <div class="row mt-4">
+
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="me-3">
+            <i class="bi-shield-shaded fs-2"></i>
+          </div>
+          <div class="mt-1">
+            <h4>Restrict User Access</h4>
+            <p class="text-muted">Nam libero tempore, cum soluta nobis est
+              eligendi optio cumque nihil impedit quo minus id quod maxime
+              placeat facere possimus, omnis voluptas assumenda est. Itaque
+              earum rerum hic tenetur, omnis dolor repellendus.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="me-3">
+            <i class="bi-person-plus-fill fs-2"></i>
+          </div>
+          <div class="mt-1">
+            <h4>Unlimited Membership</h4>
+            <p class="text-muted">Temporibus autem quibusdam et aut officiis
+              debitis aut rerum necessitatibus saepe eveniet ut et voluptates
+              repudiandae sint et molestiae non recusandae. Ut aut reiciendis
+              maiores alias doloribus asperiores repellat.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="me-3">
+            <i class="bi-credit-card fs-2"></i>
+          </div>
+          <div class="mt-1">
+            <h4>Popular Payment Gateways</h4>
+            <p class="text-muted">Proin ex lacus, vehicula a ligula non, cursus
+              feugiat odio. Aenean nec lectus a ipsum facilisis interdum et non
+              lorem. Nullam eu semper odio. Cras rutrum lacinia urna, debitis
+              aut ut lacinia dui interdum non.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="me-3">
+            <i class="bi-laptop fs-2"></i>
+          </div>
+          <div class="mt-1">
+            <h4>Great User Interface</h4>
+            <p class="text-muted">Vestibulum ante ipsum primis in faucibus orci
+              luctus et ultrices posuere cubilia Curae; Sed pellentesque, elit
+              eget fringilla malesuada, mi turpis euismod eros. Praesent ut
+              luctus nisi euismod ex commodo vehicula.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="me-3">
+            <i class="bi-link-45deg fs-2"></i>
+          </div>
+          <div class="mt-1">
+            <h4>Third Party Integration</h4>
+            <p class="text-muted">Duis commodo leo vel massa sagittis, sit amet
+              fringilla mi tristique. Suspendisse ultricies malesuada velit
+              vitae vulputate. Proin sodales sed neque sit amet tristique.
+              Duis nec lectus sit amet arcu ipsum.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="me-3">
+            <i class="bi-plus-square fs-2"></i>
+          </div>
+          <div class="mt-1">
+            <h4>Tons of Add-ons</h4>
+            <p class="text-muted">Morbi bibendum arcu sit amet lorem mollis
+              vehicula. Pellentesque libero enim, scelerisque in augue id,
+              venenatis rhoncus velit. Nam a iaculis sapien. Suspendisse sed
+              ligula vel arcu pharetra faucibus.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TOTAL SHOWCASE-->   
+  <section id="total-showcase" class="py-5 bg-dark text-white d-none d-md-block">
+    <div class="container">
+      <div class="row text-center">
+
+        <div class="col-2">
+          <div class="text-info mb-1">
+            <i class="bi-chat-dots fs-1"></i>
+          </div>
+          <p class="h5 mb-0">Activity</p>
+          <p class="h3"><strong>4,302</strong></p>
+        </div>
+
+        <div class="col-2">
+          <div class="text-info mb-1">
+            <i class="bi-person fs-1"></i>
+          </div>
+          <p class="h5 mb-0">Member</p>
+          <p class="h3"><strong>1,890</strong></p>
+        </div>
+
+        <div class="col-2">
+          <div class="text-info mb-1">
+            <i class="bi-broadcast-pin fs-1"></i>
+          </div>
+          <p class="h5 mb-0">Online</p>
+          <p class="h3"><strong>540</strong></p>
+        </div>
+
+        <div class="col-2">
+          <div class="text-info mb-1">
+            <i class="bi-people fs-1"></i>
+          </div>
+          <p class="h5 mb-0">Groups</p>
+          <p class="h3"><strong>890</strong></p>
+        </div>
+
+        <div class="col-2">
+          <div class="text-info mb-1">
+            <i class="bi-ui-checks fs-1"></i>
+          </div>
+          <p class="h5 mb-0">Forums</p>
+          <p class="h3"><strong>223</strong></p>
+        </div>
+
+        <div class="col-2">
+          <div class="text-info mb-1">
+            <i class="bi-megaphone-fill fs-1"></i>
+          </div>
+          <p class="h5 mb-0">Topics</p>
+          <p class="h3"><strong>5,397</strong></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBER LIST -->
+  <section id="member-list" class="py-5 bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center" >
+          <h1>Member List</h1>
+          <hr class="w-25 mx-auto">
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Dignissimos, vitae!</p>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+
+        <div class="col mt-3">
+          <div class="card">
+            <img class="card-img-top" src="img/thumbnail1.jpg">
+            <div class="card-body">
+              <img src="img/people1.jpg" class="rounded-circle img-thumbnail">
+              <h5 class="card-title">Ilham Saputra</h5>
+              <ul class="list-unstyled text-start my-4">
+                <li class="m-2 ms-3">
+                 <i class="bi-clock-fill me-2"></i>Bergabung di November 2010
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-briefcase-fill me-2"></i>CEO PT. Serba Jaya Sentosa
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-house-fill me-2"></i>Bandung
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-envelope-fill me-2"></i>ilhamsaputra@gmail.com
+                </li>
+              </ul>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Facilis, autem.</p>
+              <p class="card-text">
+                <small class="text-muted">Last seen 3 minutes ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mt-3">
+          <div class="card">
+            <img class="card-img-top" src="img/thumbnail2.jpg">
+            <div class="card-body">
+              <img src="img/people2.jpg" class="rounded-circle img-thumbnail">
+              <h5 class="card-title">Shakila Yuliarti</h5>
+              <ul class="list-unstyled text-start my-4">
+                <li class="m-2 ms-3">
+                 <i class="bi-clock-fill me-2"></i>Bergabung di Januari 2016
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-briefcase-fill me-2"></i>CS PT. Elektro Makmur Jaya
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-house-fill me-2"></i>Surabaya
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-envelope-fill me-2"></i>shakila@yahoo.co.id
+                </li>
+              </ul>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Facilis, autem.</p>
+              <p class="card-text">
+                <small class="text-muted">Last seen 2 days ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mt-3">
+          <div class="card">
+            <img class="card-img-top" src="img/thumbnail3.jpg">
+            <div class="card-body">
+              <img src="img/people3.jpg" class="rounded-circle img-thumbnail">
+              <h5 class="card-title">Diana Rahayu</h5>
+              <ul class="list-unstyled text-start my-4">
+                <li class="m-2 ms-3">
+                 <i class="bi-clock-fill me-2"></i>Bergabung di Juni 2014
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-briefcase-fill me-2"></i>Marketing Tokobaju.com
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-house-fill me-2"></i>Pekanbaru
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-envelope-fill me-2"></i>diana_123@gmail.com
+                </li>
+              </ul>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Facilis, autem.</p>
+              <p class="card-text">
+                <small class="text-muted">online</small>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mt-3">
+          <div class="card">
+            <img class="card-img-top" src="img/thumbnail4.jpg">
+            <div class="card-body">
+              <img src="img/people4.jpg" class="rounded-circle img-thumbnail">
+              <h5 class="card-title">Prayitna Warsa Ardianto</h5>
+              <ul class="list-unstyled text-start my-4">
+                <li class="m-2 ms-3">
+                 <i class="bi-clock-fill me-2"></i>Bergabung di Maret 2017
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-briefcase-fill me-2"></i>Owner PT. Aneka Komputer
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-house-fill me-2"></i>Jakarta
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-envelope-fill me-2"></i>prayitna001@outlook.com
+                </li>
+              </ul>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Facilis, autem.</p>
+              <p class="card-text">
+                <small class="text-muted">online</small>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mt-3">
+          <div class="card">
+            <img class="card-img-top" src="img/thumbnail5.jpg">
+            <div class="card-body">
+              <img src="img/people5.jpg" class="rounded-circle img-thumbnail">
+              <h5 class="card-title">Edi Kurniawan</h5>
+              <ul class="list-unstyled text-start my-4">
+                <li class="m-2 ms-3">
+                 <i class="bi-clock-fill me-2"></i>Bergabung di Desember 2012
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-briefcase-fill me-2"></i>Teknisi CV. Komputika
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-house-fill me-2"></i>Bekasi
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-envelope-fill me-2"></i>kurniawanedi@gmail.com
+                </li>
+              </ul>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Facilis, autem.</p>
+              <p class="card-text">
+                <small class="text-muted">Last seen 10 minutes ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mt-3">
+          <div class="card">
+            <img class="card-img-top" src="img/thumbnail6.jpg">
+            <div class="card-body">
+              <img src="img/people6.jpg" class="rounded-circle img-thumbnail">
+              <h5 class="card-title">Zamira Novitasari</h5>
+              <ul class="list-unstyled text-start my-4">
+                <li class="m-2 ms-3">
+                 <i class="bi-clock-fill me-2"></i>Bergabung di Juni 2016
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-briefcase-fill me-2"></i>CS Traveloka.com
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-house-fill me-2"></i>Makassar
+                </li>
+                <li class="m-2 ms-3">
+                 <i class="bi-envelope-fill me-2"></i>zamira@tiketku.com
+                </li>
+              </ul>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Facilis, autem.</p>
+              <p class="card-text">
+                <small class="text-muted">online</small>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="main-footer" class="text-white bg-dark py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 text-center text-md-start">
+          <a href="index.html">
+            <img src="img/ilkoom_logo.png" style="height: 60px;" >
+          </a>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Aperiam cumque, esse modi maxime veniam nulla delectus dolorem
+          </p>
+        </div>
+
+        <div class="col-md-3 text-center">
+          <h5>Community</h5>
+          <ul class="list-unstyled">
+              <li><a href="#" class="text-white text-decoration-none">
+                Activity</a></li>
+              <li><a href="#" class="text-white text-decoration-none">
+                Members</a></li>
+              <li><a href="#" class="text-white text-decoration-none">
+                Groups</a></li>
+              <li><a href="#" class="text-white text-decoration-none">
+                Forums</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 text-center">
+          <h5>Our Services</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">
+                Our mission</a></li>
+            <li><a href="#" class="text-white text-decoration-none">
+              Help/Contact Us</a></li>
+            <li><a href="#" class="text-white text-decoration-none">
+              Privacy Policy</a></li>
+            <li><a href="#" class="text-white text-decoration-none">
+              Cookie Policy</a></li>
+            <li><a href="#" class="text-white text-decoration-none">
+              Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 text-center text-md-start">
+          <h5>Hubungi Kami</h5>
+          <div style="white-space:nowrap;">
+            <i class="bi-envelope fs-5 me-2 me-lg-3" ></i>andre@ilkoom.com</div>
+          <div style="white-space:nowrap;">
+            <i class="bi-phone fs-5 me-2 me-lg-3"></i>(021) 123456</div>
+          <div style="white-space:nowrap;">
+            <i class="bi-globe fs-5 me-2 me-lg-3"></i>www.ilkoom.com</div>
+        </div>
+      </div>
+
+      <div class="row mt-3 mt-md-0">
+        <div class="col-md-3 me-md-auto text-center text-md-start">
+          <small>&copy; ILKOOM 2018</small>
+        </div>
+        <div class="col-md-3 text-center text-md-start">
+          <div style="white-space:nowrap;">
+            <a href="#" class="text-white text-decoration-none me-2">
+              <i class="bi-facebook fs-5"></i>
+            </a>
+            <a href="#" class="text-white text-decoration-none me-2">
+              <i class="bi-twitter fs-5"></i>
+            </a>
+            <a href="#" class="text-white text-decoration-none me-2">
+              <i class="bi-instagram fs-5"></i>
+            </a>
+            <a href="#" class="text-white text-decoration-none me-2">
+              <i class="bi-whatsapp fs-5"></i>
+            </a>
+            <a href="#" class="text-white text-decoration-none me-2">
+              <i class="bi-github fs-5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

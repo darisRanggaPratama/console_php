@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+      .row {
+        margin-top: 1em; 
+      }
+      [class^="col"] {
+        background-color: rgba(86, 61, 124, 0.15);
+        border: 1px solid rgba(86, 61, 124, 0.2);
+        padding: 0.4em;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col"> Kolom 1 </div>
+        <div class="col order-last"> Kolom 2 </div>
+        <div class="col order-first"> Kolom 3 </div>
+      </div>
+      <div class="row">
+        <div class="col"> Kolom 1 </div>
+        <div class="col order-1"> Kolom 2 </div>
+        <div class="col order-first"> Kolom 3 </div>
+      </div>
+    </div>
+
+  <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
