@@ -63,44 +63,81 @@ $data2 = json_encode($data2);
         let values1 = [];
         let values2 = [];
 
+        let dataSets = [];
+
 
         // Loop data dan masukkan ke dalam array
-        data1.forEach(function(datum) {
+        // new Intl.NumberFormat("id-ID").format(bilangan)
+
+                data1.forEach(function(datum) {
             labels.push(datum.Bulan);
+            // const val = new Intl.NumberFormat("id-ID").format(datum.Gaji);
             values1.push(datum.Gaji);
         });
 
+
         data2.forEach(function(datum) {
+            // const val = new Intl.NumberFormat("id-ID").format(datum.Transfer);
             values2.push(datum.Transfer);
         });
+
+        const datum = [values1, values2];
+        const typeChart = [{
+                type: 'line',
+                labels: 'Gaji'
+            },
+            {
+                type: 'bar',
+                labels: 'Transfer'
+
+            }
+        ];
+
+        const typeColor = [{
+                border: 'rgb(255, 99, 132)',
+                background: 'rgba(255, 99, 132, 0.2)'
+            },
+            {
+                border: 'rgb(100, 99, 132)',
+                background: 'rgba(100, 99, 132, 0.2)'
+            }
+        ];
+
+        // console.log(labels);
+        for (let i = 0; i < 2; i++) {
+            dataSets.push({
+                type: typeChart[i].type,
+                label: typeChart[i].labels,
+                data: datum[i],
+                borderColor: typeColor[i].border,
+                backgroundColor: typeColor[i].background,
+                tension: 0.1
+            })
+        }
+
+        // console.log(dataSets);
+        const objLableValue = {
+            labels: labels,
+            datasets: dataSets
+
+        };
+
+
 
         // Konfigurasi Grafik
         let ctx = document.getElementById("chartContainer");
         var chart = new Chart(ctx, {
-            type: "bar",
-            data: {
-                labels: labels,
-                datasets: [{
-                        type: "bar",
-                        backgroundColor: "rgba(54, 162, 235, 0.2)",
-                        borderColor: "rgba(54, 162, 235, 1)",
-                        borderWidth: 1,
-                        label: "Transfer",
-                        data: values2
-                    },
-                    {
-                        type: "line",
-                        label: "Gaji Pokok",
-                        data: values1,
-                        lineTension: 0.1,
-                        fill: true,
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        borderWidth: 1
+                    type: "bar",
+                    data: objLableValue,
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: false
+                            }
+                        }
                     }
-                ]
-            }
-        });
+                    });
     </script>
 </body>
+
 </html>
