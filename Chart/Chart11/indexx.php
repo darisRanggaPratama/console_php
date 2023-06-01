@@ -6,7 +6,7 @@ $data1 = array();
 while ($row = mysqli_fetch_array($result1)) {
     $data1[] = array(
         'Bulan' => $row['BULAN'],
-        'Bruto' => $row['BRUTO']
+        'Gaji' => $row['GAJI']
     );
 }
 
@@ -67,7 +67,7 @@ $data2 = json_encode($data2);
         // Loop data dan masukkan ke dalam array
         data1.forEach(function(datum) {
             labels.push(datum.Bulan);
-            values1.push(datum.Bruto);
+            values1.push(datum.Gaji);
         });
 
         data2.forEach(function(datum) {
@@ -85,13 +85,13 @@ $data2 = json_encode($data2);
                         backgroundColor: "rgba(54, 162, 235, 0.2)",
                         borderColor: "rgba(54, 162, 235, 1)",
                         borderWidth: 1,
-                        label: "Bruto",
-                        data: values1
+                        label: "Netto",
+                        data: values2
                     },
                     {
                         type: "line",
-                        label: "Netto",
-                        data: values2,
+                        label: "Gaji",
+                        data: values1,
                         lineTension: 0.1,
                         fill: true,
                         backgroundColor: 'rgba(255, 99, 132, 0.2)',
