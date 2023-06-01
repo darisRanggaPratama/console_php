@@ -32,7 +32,7 @@ $data2 = json_encode($data2);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulasi Payroll</title>
     <!-- Load library Chart.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <style>
         canvas {
             padding-left: 0;
@@ -74,33 +74,39 @@ $data2 = json_encode($data2);
             values2.push(datum.Transfer);
         });
 
-        // Konfigurasi Grafik
-        let ctx = document.getElementById("chartContainer");
-        var chart = new Chart(ctx, {
-            type: "bar",
+        // Buat grafik
+        let ctx = document.getElementById('chartContainer').getContext('2d');
+        let chart = new Chart(ctx, {
+            type: 'bar',
             data: {
                 labels: labels,
                 datasets: [{
-                        type: "bar",
-                        backgroundColor: "rgba(54, 162, 235, 0.2)",
-                        borderColor: "rgba(54, 162, 235, 1)",
-                        borderWidth: 1,
-                        label: "Netto",
-                        data: values2
-                    },
-                    {
-                        type: "line",
-                        label: "Gaji",
+                        label: 'Gaji',
                         data: values1,
-                        lineTension: 0.1,
-                        fill: true,
                         backgroundColor: 'rgba(255, 99, 132, 0.2)',
                         borderColor: 'rgba(255, 99, 132, 1)',
-                        borderWidth: 1
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Transfer',
+                        data: values2,
+                        backgroundColor: 'rgba(147, 148, 243, 0.3)',
+                        borderColor: 'rgba(46, 49, 243, 1)',
+                        borderWidth: 2
                     }
-                ]
+                ],
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: false
+                        }
+                    }]
+                }
             }
         });
     </script>
 </body>
+
 </html>
