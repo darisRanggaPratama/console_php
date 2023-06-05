@@ -12,12 +12,12 @@ $sql = "INSERT INTO 'users' (username, mobile, email, city) VALUES(
 
 $query = mysqli_query($con, $sql);
 
-if ($query == true) {
+if ($query === true) {
     $data = array(
         'status' => 'success',
     );
     echo json_encode($data);
-} else {    
+} else {
         $data = array(
             'status' => 'failed',
         );
@@ -26,4 +26,4 @@ if ($query == true) {
 }
 
 
-?>
+

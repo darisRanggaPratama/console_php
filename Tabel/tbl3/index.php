@@ -77,31 +77,42 @@
             }]
         });
     </script>
-    <script>
-        $(document).on('submit', '$addUserModal', function(event){
+    <script type="text/javascript">
+        $(document).on('submit', '#saveUserForm', function(event) {
             event.preventDefault();
             let username = $('#inputUsername').val();
             let email = $('#inputEmail').val();
             let mobile = $('#inputMobile').val();
             let city = $('#inputCity').val();
 
-            if (name !='' && email !='' && mobile !='' && city !=''){
-                $.ajax(
-                    {
-                        url:"add_user.php",
-                        data:{
-                            name:name, email:email, mobile:mobile, city:city
-                        },
-                        type: 'post' ,
-                        success:function(data){
-                            // menit ke: 33
+            if (username != '' && email != '' && mobile != '' && city != '') {
+                $.ajax({
+                    url: "add_user.php",
+                    data: {
+                        username: username,
+                        email: email,
+                        mobile: mobile,
+                        city: city
+                    },
+                    type: 'post',
+                    success: function(data) {
+                        let json = JSON.parse(data);
+                        let status = json.status;
+                        if (status == 'true') {
+                            table = $('#datatable').DataTable();
+                            table.draw();
+                            alert('Successfully user added');
+                            $('#addUserModal').modal('hide');
+                        } else {
+                            alert('failed');
                         }
+                        // menit ke: 33
                     }
-                )
-
+                });
             } else {
                 alert("Please fill all the required fields");
             }
+
         })
     </script>
 
@@ -117,40 +128,36 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="javascript:void()" id="saveUserForm" method="POST">
-                <div class="modal-body">
-                    <div class="mb-3 row">
-                        <label for="inputUsername" class="col-sm-2 col-form-label">UserName</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="username" class="form-control" id="inputUsername"
-                             value="oyen">
+                    <div class="modal-body">
+                        <div class="mb-3 row">
+                            <label for="inputUsername" class="col-sm-2 col-form-label">UserName</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="username" class="form-control" id="inputUsername" value="oyen">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputEmail" name="inputEmail" value="meong@gmail.com">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="inputMobile" class="col-sm-2 col-form-label">Mobile</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputMobile" name="inputMobile" value="08">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="inputCity" class="col-sm-2 col-form-label">City</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputCity" name="inputCity" value="Jakarta">
+                            </div>
                         </div>
                     </div>
-                    <div class="mb-3 row">
-                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputEmail"
-                             name="inputEmail" value="meong@gmail.com">
-                        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
                     </div>
-                    <div class="mb-3 row">
-                        <label for="inputMobile" class="col-sm-2 col-form-label">Mobile</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputMobile"
-                             name="inputMobile" value="08">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="inputCity" class="col-sm-2 col-form-label">City</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputCity"
-                             name="inputCity" value="Jakarta">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
-                </div>
                 </form>
             </div>
         </div>

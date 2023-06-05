@@ -41,7 +41,7 @@ if($_POST['length'] != -1)
 	$sql .= " LIMIT  ".$start.", ".$length;
 }	
 
-$query = mysqli_query($con,$sql);
+$query = mysqli_query($con, $sql);
 $count_rows = mysqli_num_rows($query);
 $data = array();
 while($row = mysqli_fetch_assoc($query))

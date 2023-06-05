@@ -63,13 +63,13 @@ $data2 = json_encode($data2);
         let values1 = [];
         let values2 = [];
 
+        // Object
         let dataSets = [];
 
-
         // Loop data dan masukkan ke dalam array
-        // new Intl.NumberFormat("id-ID").format(bilangan)
+        // Format angka: new Intl.NumberFormat("id-ID").format(bilangan)
 
-                data1.forEach(function(datum) {
+        data1.forEach(function(datum) {
             labels.push(datum.Bulan);
             // const val = new Intl.NumberFormat("id-ID").format(datum.Gaji);
             values1.push(datum.Gaji);
@@ -122,21 +122,19 @@ $data2 = json_encode($data2);
 
         };
 
-
-
         // Konfigurasi Grafik
         let ctx = document.getElementById("chartContainer");
         var chart = new Chart(ctx, {
-                    type: "bar",
-                    data: objLableValue,
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: false
-                            }
-                        }
+            type: "bar",
+            data: objLableValue,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
                     }
-                    });
+                }
+            }
+        });
     </script>
 </body>
 
