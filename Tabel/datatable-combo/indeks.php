@@ -55,8 +55,7 @@ include_once('connect.php');
                 <th style="text-align:center">Gaji</th>
                 <th style="text-align:center">Lembur</th>
                 <th style="text-align:center">Tj Lain</th>
-                <th style="text-align:center">Bruto</th>
-                <th style="text-align:center">Potongan</th>
+                <th style="text-align:center">Bruto</th>              
                 <th style="text-align:center">Transfer</th>
                 <th style="text-align:center">Qty</th>
 
@@ -66,19 +65,18 @@ include_once('connect.php');
         <hr>
         <tbody>
             <?php
-            $query = "SELECT * FROM dummy ORDER BY KODE ASC";
+            $query = "SELECT * FROM me_pst ORDER BY kode ASC";
             $tampil = mysqli_query($connect, $query);
             $no = 1;
             while ($result = mysqli_fetch_array($tampil)) {
-                $kode = $result['KODE'];
-                $bulan = $result['BULAN'];
-                $gaji = $result['GAJI'];
-                $lembur = $result['LEMBUR'];
-                $tjLain = $result['TJ_LAIN'];
-                $bruto = $result['BRUTO'];
-                $potongan = $result['POTONGAN'];
-                $transfer = $result['TRANSFER'];
-                $human = $result['HUMAN'];
+                $kode = $result['kode'];
+                $bulan = $result['bln'];
+                $gaji = $result['gaji'];
+                $lembur = $result['lembur'];
+                $tjLain = $result['tj_lain'];
+                $bruto = $result['bruto'];              
+                $transfer = $result['trf'];
+                $human = $result['hmn'];
             ?>
                 <tr style="text-align:center">
                     <td><?php echo $no++; ?></td>
@@ -87,8 +85,7 @@ include_once('connect.php');
                     <td><?php echo number_format($gaji, 0, ",", "."); ?></td>
                     <td><?php echo number_format($lembur, 0, ",", "."); ?></td>
                     <td><?php echo number_format($tjLain, 0, ",", "."); ?></td>
-                    <td><?php echo number_format($bruto, 0, ",", "."); ?></td>
-                    <td><?php echo number_format($potongan, 0, ",", "."); ?></td>
+                    <td><?php echo number_format($bruto, 0, ",", "."); ?></td>                    
                     <td><?php echo number_format($transfer, 0, ",", "."); ?></td>
                     <td><?php echo number_format($human, 0, ",", "."); ?></td>
 
@@ -105,8 +102,7 @@ include_once('connect.php');
                 <th style="text-align:center">Gaji</th>
                 <th style="text-align:center">Lembur</th>
                 <th style="text-align:center">Tj Lain</th>
-                <th style="text-align:center">Bruto</th>
-                <th style="text-align:center">Potongan</th>
+                <th style="text-align:center">Bruto</th>                
                 <th style="text-align:center">Transfer</th>
                 <th style="text-align:center">Qty</th>
             </tr>
