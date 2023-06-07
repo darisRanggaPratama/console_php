@@ -65,18 +65,18 @@ include_once('connect.php');
         <hr>
         <tbody>
             <?php
-            $query = "SELECT * FROM me_pst ORDER BY kode ASC";
+            $query = "SELECT * FROM sampledb ORDER BY KODE ASC";
             $tampil = mysqli_query($connect, $query);
             $no = 1;
             while ($result = mysqli_fetch_array($tampil)) {
-                $kode = $result['kode'];
-                $bulan = $result['bln'];
-                $gaji = $result['gaji'];
-                $lembur = $result['lembur'];
-                $tjLain = $result['tj_lain'];
-                $bruto = $result['bruto'];              
-                $transfer = $result['trf'];
-                $human = $result['hmn'];
+                $kode = $result['KODE'];
+                $bulan = $result['BLN'];
+                $gaji = $result['GAJI'];
+                $lembur = $result['LEMBUR'];
+                $tjLain = $result['TJ_LAIN'];
+                $bruto = $result['BRUTO'];
+                $transfer = $result['TRF'];
+                $human = $result['HMN'];
             ?>
                 <tr style="text-align:center">
                     <td><?php echo $no++; ?></td>

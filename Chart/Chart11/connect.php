@@ -10,8 +10,8 @@ $connect = mysqli_connect($server, $user, $password, $database);
 
 // Query untuk mengambil data dari tabel
 $thn = 2021;
-$query = "SELECT BULAN, GAJI, BRUTO, TRANSFER, KODE REGEXP '^".$thn."' AS search
-            FROM dummy
+$query = "SELECT BLN, GAJI, BRUTO, TRF, KODE REGEXP '^".$thn."' AS search
+            FROM sampledb
             HAVING search = 1
             ORDER BY KODE ASC";
 
