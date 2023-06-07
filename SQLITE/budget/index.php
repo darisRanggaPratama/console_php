@@ -1,10 +1,10 @@
 <?php
 
 // Includs database connection
-include "db_connect.php";
+include "connect.php";
 
 // Makes query with rowid
-$query = "SELECT rowid, * FROM sample";
+$query = "SELECT ID AS rowid, BLN, BRUTO, TRF FROM sample";
 
 // Run the query and set query result in $result
 // Here $db comes from "db_connection.php"
@@ -15,7 +15,7 @@ $result = $db->query($query);
 <html>
 
 <head>
-	<title>Data List</title>
+	<title>Budget</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
 	<style type="text/css">
@@ -42,7 +42,7 @@ $result = $db->query($query);
 			$id = $_GET['ID']; // rowid from url
 
 			// Prepar the deleting query according to rowid
-			$query = "DELETE FROM s WHERE rowid=$id";
+			$query = "DELETE FROM sample WHERE rowid=$id";
 
 			// Run the query to delete record
 			if ($db->query($query)) {
@@ -57,13 +57,14 @@ $result = $db->query($query);
 		?>
 		<a href="insert.php" class="addbtn">Add New</a>
 		<table id="example" class="table table-bordered" width="100%" cellpadding="5" cellspacing="1" border="1">
+			<caption>Data Payroll</caption>
 			<thead>
-			<tr>
-				<td>BULAN</td>
-				<td>BRUTO</td>
-				<td>TRANSFER</td>
-                <td>ACTION</td>
-			</tr>
+			
+				<th>BULAN</th>
+				<th>BRUTO</th>
+				<th>TRANSFER</th>
+                <th>ACTION</th>
+			
 			</thead>
 			<tbody>
 			<?php while ($row = $result->fetchArray()) { ?>
