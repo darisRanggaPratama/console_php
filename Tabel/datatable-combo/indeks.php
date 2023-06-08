@@ -77,6 +77,8 @@ include_once('connect.php');
                 $bruto = $result['BRUTO'];
                 $transfer = $result['TRF'];
                 $human = $result['HMN'];
+
+                echo $kode." ".$bulan;
             ?>
                 <tr style="text-align:center">
                     <td><?php echo $no++; ?></td>

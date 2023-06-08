@@ -20,15 +20,15 @@ if (isset($_POST['submit_data'])) {
 	$hmn = $_POST['human'];
 
 	// Makes query with post data
-	$query = "UPDATE sample set
-	KODE='$kode', BLN='$bln', GAJI='$gaji', LEMBUR='$lembur', TJ_LAIN='$tj_lain',
-	BRUTO='$bruto', POT='$potong', TRF='$transfer', HMN='$hmn'
-	WHERE ID=$id";
+	$query = "UPDATE dummy set
+	KODE='$kode', BULAN='$bln', GAJI='$gaji', LEMBUR='$lembur', TJ_LAIN='$tj_lain',
+	BRUTO='$bruto', POTONGAN='$potong', TRANSFER='$transfer', HUMAN='$hmn'
+	WHERE NMR=$id";
 
 	// Executes the query
 	// If data inserted then set success message otherwise set error message
 	// Here $db comes from "connect.php"
-	if ($db->exec($query)) {
+	if (mysqli_query($connect, $query)) {
 		$message = "Data is updated successfully.";
 	} else {
 		$message = "Sorry, Data is not updated.";
@@ -37,9 +37,9 @@ if (isset($_POST['submit_data'])) {
 
 $id = $_GET['id']; // rowid from url
 // Prepar the query to get the row data with rowid
-$query = "SELECT * FROM sample WHERE ID=$id";
-$result = $db->query($query);
-$data = $result->fetchArray(); // set the row in $data
+$query = "SELECT * FROM dummy WHERE NMR=$id";
+$result = mysqli_query($connect, $query);
+$data = mysqli_fetch_array($result);// set the row in $data
 ?>
 
 <!DOCTYPE html>
@@ -60,14 +60,14 @@ $data = $result->fetchArray(); // set the row in $data
 
 		<table class="table table-bordered" width="100%" cellpadding="5" cellspacing="1" border="1">
 			<form action="" method="POST">
-				<input type="hidden" name="id" value="<?php echo $data['ID']; ?>">
+				<input type="hidden" name="id" value="<?php echo $data['NMR']; ?>">
 				<tr>
 					<td>Kode</td>
 					<td><input name="kode" type="text" class="form-control" value="<?php echo $data['KODE']; ?>" required></td>
 				</tr>
 				<tr>
 					<td>Bulan</td>
-					<td><input name="bulan" type="text" class="form-control" value="<?php echo $data['BLN']; ?>" required></td>
+					<td><input name="bulan" type="text" class="form-control" value="<?php echo $data['BULAN']; ?>" required></td>
 				</tr>
 				<tr>
 					<td>Gaji</td>
@@ -87,15 +87,15 @@ $data = $result->fetchArray(); // set the row in $data
 				</tr>
 				<tr>
 					<td>Potongan</td>
-					<td><input name="potong" type="text" class="form-control" value="<?php echo $data['POT']; ?>" required></td>
+					<td><input name="potong" type="text" class="form-control" value="<?php echo $data['POTONGAN']; ?>" required></td>
 				</tr>
 				<tr>
 					<td>Transfer</td>
-					<td><input name="transfer" type="text" class="form-control" value="<?php echo $data['TRF']; ?>" required></td>
+					<td><input name="transfer" type="text" class="form-control" value="<?php echo $data['TRANSFER']; ?>" required></td>
 				</tr>
 				<tr>
 					<td>Employee</td>
-					<td><input name="human" type="text" class="form-control" value="<?php echo $data['HMN']; ?>" required></td>
+					<td><input name="human" type="text" class="form-control" value="<?php echo $data['HUMAN']; ?>" required></td>
 				</tr>
 				<tr>
 					<td><a href="index.php" class="btn btn-sm btn-primary">View Data</a></td>
