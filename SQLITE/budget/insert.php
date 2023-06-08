@@ -8,10 +8,19 @@ if( isset($_POST['submit_data']) ){
 	// Gets the data from post
 	$kode = $_POST['kode'];
 	$bln = $_POST['bulan'];
+	$gaji = $_POST['gaji'];
+	$lembur = $_POST['lembur'];
+	$tj_lain = $_POST['tj_lain'];
 	$bruto = $_POST['bruto'];
+	$potong = $_POST['potong'];
+	$transfer = $_POST['transfer'];
+	$hmn = $_POST['human'];
 
 	// Makes query with post data
-	$query = "INSERT INTO sample (KODE, BLN, BRUTO) VALUES ('$kode', '$bln', '$bruto')";
+	$query = "INSERT INTO sample
+	(KODE, BLN, GAJI, LEMBUR, TJ_LAIN, BRUTO, POT, TRF, HMN)
+	VALUES
+	('$kode', '$bln', '$gaji', '$lembur', '$tj_lain', '$bruto', '$potong', '$transfer', '$hmn')";
 	
 	// Executes the query
 	// If data inserted then set success message otherwise set error message
@@ -33,6 +42,7 @@ if( isset($_POST['submit_data']) ){
 </head>
 <body>
 	<div style="width: 500px; margin: 20px auto;">
+	<h1 style="text-align:center">INPUT DATA</h1>
 
 		<!-- showing the message here-->
 		<div><?php echo $message;?></div>
@@ -40,16 +50,40 @@ if( isset($_POST['submit_data']) ){
 		<table class="table table-bordered" width="100%" cellpadding="5" cellspacing="1" border="1">
 			<form action="insert.php" method="POST">
 			<tr>
-				<td>Kode:</td>
+				<td>Kode</td>
 				<td><input name="kode" type="text" class="form-control" required></td>
 			</tr>
 			<tr>
-				<td>Bulan:</td>
+				<td>Bulan</td>
 				<td><input name="bulan" type="text" class="form-control" required></td>
+			</tr>
+			<tr>
+				<td>Gaji</td>
+				<td><input name="gaji" type="text" class="form-control" required></td>
+			</tr>
+			<tr>
+				<td>Lembur</td>
+				<td><input name="lembur" type="text" class="form-control" required></td>
+			</tr>
+			<tr>
+				<td>Tj. Lain</td>
+				<td><input name="tj_lain" type="text" class="form-control" required></td>
 			</tr>
 			<tr>
 				<td>Bruto:</td>
 				<td><input name="bruto" type="text" class="form-control" required></td>
+			</tr>
+			<tr>
+				<td>Potongan</td>
+				<td><input name="potong" type="text" class="form-control" required></td>
+			</tr>
+			<tr>
+				<td>Transfer</td>
+				<td><input name="transfer" type="text" class="form-control" required></td>
+			</tr>
+			<tr>
+				<td>Employee</td>
+				<td><input name="human" type="text" class="form-control" required></td>
 			</tr>
 			<tr>
 				<td><a href="index.php" class="btn btn-sm btn-primary">View Data</a></td>

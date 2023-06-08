@@ -39,7 +39,7 @@ $result = $db->query($query);
 <body>
 
 	<div style="width: 1000px; margin: 20px auto;">
-		<h1>Data Payroll</h1>
+		<h1 style="text-align:center">Data Payroll</h1>
 		<?php
 		if (isset($_GET['aksi']) == 'del') {
 			$id = $_GET['id']; // id from url
@@ -59,16 +59,24 @@ $result = $db->query($query);
 		}
 		?>
 		<a href="insert.php" class="addbtn" >Add New</a>
+		<br>
+		<br>
 		<table id="example" class="table table-bordered" width="100%" cellpadding="5" cellspacing="1" border="1">
-			<caption>Data Payroll</caption>
+			<caption >Data Payroll</caption>
 			<thead>
 				<th style="text-align:center">ID</th>
 				<th style="text-align:center"></th>
 				<th style="text-align:center">KODE</th>
 				<th style="text-align:center">BLN</th>
+				<th style="text-align:center">GAJI</th>
+				<th style="text-align:center">LEMBUR</th>
+				<th style="text-align:center">TJ_LAIN</th>
 				<th style="text-align:center">BRUTO</th>
+				<th style="text-align:center">POTONG</th>
 				<th style="text-align:center">TRANSFER</th>
-				<th style="text-align:center"></th>
+				<th style="text-align:center">QTY</th>
+				<th style="text-align:center">
+				<img src="icons8_delete.png" alt="edit" style="width:20px;height:20px;"></th>
 			</thead>
 			<tbody>
 				<?php while ($row = $result->fetchArray()) { ?>
@@ -76,16 +84,21 @@ $result = $db->query($query);
 						<td style="text-align:center"><?php echo $row['ID']; ?></td>
 						<td style="text-align:center">
 							<a href="update.php?id=<?php echo $row['ID']; ?>" class="btn btn-sm btn-primary">
-							<img src="icons8-edit.png" alt="edit" style="width:20px;height:20px;"></a>
+							<img src="icons8-edit.png" alt="edit" style="width:15px;height:15px;"></a>
 						</td>
 						<td style="text-align:center"><?php echo $row['KODE']; ?></td>
 						<td style="text-align:center"><?php echo $row['BLN']; ?></td>
+						<td style="text-align:center"><?php echo $row['GAJI']; ?></td>
+						<td style="text-align:center"><?php echo $row['LEMBUR']; ?></td>
+						<td style="text-align:center"><?php echo $row['TJ_LAIN']; ?></td>
 						<td style="text-align:right"><?php echo $row['BRUTO']; ?></td>
+						<td style="text-align:center"><?php echo $row['POT']; ?></td>
 						<td style="text-align:right"><?php echo $row['TRF']; ?></td>
+						<td style="text-align:center"><?php echo $row['HMN']; ?></td>
 						<td style="text-align:right">
 							<a href="index.php?aksi=del&id=<?php echo $row['ID']; ?>" 
 							class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?');">
-							<img src="icons8_del.png" alt="delete" style="width:20px;height:20px;"></a>
+							<img src="icons8_del.png" alt="delete" style="width:15px;height:15px;"></a>
 							</a>
 						</td>
 					</tr>
