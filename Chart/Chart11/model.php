@@ -5,7 +5,7 @@ require_once "connect.php";
 $data1 = array();
 while ($row = mysqli_fetch_array($result1)) {
     $data1[] = array(
-        'Bulan' => $row['BLN'],
+        'Bulan' => $row['BULAN'],
         'Gaji' => $row['GAJI']
     );
 }
@@ -13,8 +13,8 @@ while ($row = mysqli_fetch_array($result1)) {
 $data2 = array();
 while ($row = mysqli_fetch_array($result2)) {
     $data2[] = array(
-        'Bulan' => $row['BLN'],
-        'Transfer' => $row['TRF']
+        'Bulan' => $row['BULAN'],
+        'Transfer' => $row['TRANSFER']
     );
 }
 

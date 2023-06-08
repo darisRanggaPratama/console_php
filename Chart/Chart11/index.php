@@ -1,28 +1,8 @@
 <?php
-require_once "connect.php";
-
-// Array untuk menyimpan data
-$data1 = array();
-while ($row = mysqli_fetch_array($result1)) {
-    $data1[] = array(
-        'Bulan' => $row['BULAN'],
-        'Gaji' => $row['GAJI']
-    );
-}
-
-$data2 = array();
-while ($row = mysqli_fetch_array($result2)) {
-    $data2[] = array(
-        'Bulan' => $row['BULAN'],
-        'Transfer' => $row['TRANSFER']
-    );
-}
-
-// Encode data ke dalam format JSON
-$data1 = json_encode($data1);
-$data2 = json_encode($data2);
+require_once "model.php";
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +12,7 @@ $data2 = json_encode($data2);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulasi Payroll</title>
     <!-- Load library Chart.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         canvas {
             padding-left: 0;
@@ -43,11 +23,84 @@ $data2 = json_encode($data2);
             width: 100%;
             max-width: 1500px;
         }
-    </style>
 
+        form {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 100%;
+            max-width: 300px;
+        }
+    </style>
 </head>
 
 <body>
+    <form action="index.php" method="GET">
+        <p style="text-align: center;">Tahun</p>
+        <label for="tahun1">From</label>
+        <select id="tahun1" name="thn1">
+            <?php
+            $year = array(2021, 2022, 2023, 2024, 2025);
+
+
+            for ($i = 0; $i < sizeof($year); $i++) {
+                echo "<option value=" . $year[$i] . ">$year[$i]</option>";
+            }
+            ?>
+
+        </select>
+        <label for="tahun2">To</label>
+        <select id="tahun2" name="thn2">
+            <?php
+            for ($i = 0; $i < sizeof($year); $i++) {
+                echo "<option value=" . $year[$i] . ">$year[$i]</option>";
+            }
+            ?>
+
+        </select>
+        <p style="text-align: center;">Bulan</p>
+        <label for="bulan">From</label>
+        <select id="bulan1" name="bln1">
+            <?php
+            $month = array(
+                "01" => "January",
+                "02" => "February",
+                "03" => "March",
+                "04" => "April",
+                "05" => "May",
+                "06" => "June",
+                "07" => "July",
+                "08" => "August",
+                "09" => "September",
+                "10" => "October",
+                "11" => "November",
+                "12" => "December"
+            );
+
+            foreach ($month as $key => $value) {
+                echo "<option value=" . $key . ">$value</option>";
+            }
+            ?>
+
+        </select>
+        <label for="bulan">To</label>
+        <select id="bulan2" name="bln2">
+            <?php
+            foreach ($month as $key => $value) {
+                echo "<option value=" . $key . ">$value</option>";
+            }
+            ?>
+        </select>
+        <br>
+        <br>
+        <div style="text-align: center;">
+            <input style="text-align:center;" type="submit">
+        </div>
+    </form>
+    <br>
+    <br>
     <!-- Buat elemen canvas untuk menampilkan grafik -->
     <canvas id="chartContainer"></canvas>
 
@@ -59,29 +112,25 @@ $data2 = json_encode($data2);
 
         // Array untuk menyimpan label
         let labels = [];
-        // Array untuk menyimpan value
+
+        // Array untuk menyimpan value (kurva)
         let values1 = [];
         let values2 = [];
 
-        // Object
+        // Object (data)
         let dataSets = [];
 
         // Loop data dan masukkan ke dalam array
-        // Format angka: new Intl.NumberFormat("id-ID").format(bilangan)
-
         data1.forEach(function(datum) {
             labels.push(datum.Bulan);
-            // const val = new Intl.NumberFormat("id-ID").format(datum.Gaji);
             values1.push(datum.Gaji);
         });
 
-
         data2.forEach(function(datum) {
-            // const val = new Intl.NumberFormat("id-ID").format(datum.Transfer);
             values2.push(datum.Transfer);
         });
 
-        const datum = [values1, values2];
+        const allValue = [values1, values2];
         const typeChart = [{
                 type: 'line',
                 labels: 'Gaji'
@@ -89,7 +138,6 @@ $data2 = json_encode($data2);
             {
                 type: 'bar',
                 labels: 'Transfer'
-
             }
         ];
 
@@ -103,34 +151,32 @@ $data2 = json_encode($data2);
             }
         ];
 
-        // console.log(labels);
         for (let i = 0; i < 2; i++) {
             dataSets.push({
                 type: typeChart[i].type,
                 label: typeChart[i].labels,
-                data: datum[i],
+                data: allValue[i],
                 borderColor: typeColor[i].border,
                 backgroundColor: typeColor[i].background,
+                fill: true,
                 tension: 0.1
             })
         }
 
-        // console.log(dataSets);
-        const objLableValue = {
+        const lableValue = {
             labels: labels,
             datasets: dataSets
-
         };
 
         // Konfigurasi Grafik
         let ctx = document.getElementById("chartContainer");
         var chart = new Chart(ctx, {
-            type: "bar",
-            data: objLableValue,
+            type: "scatter",
+            data: lableValue,
             options: {
                 scales: {
                     y: {
-                        beginAtZero: true
+                        beginAtZero: false
                     }
                 }
             }

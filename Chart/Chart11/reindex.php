@@ -1,8 +1,28 @@
 <?php
-require_once "model.php";
+require_once "connect.php";
+
+// Array untuk menyimpan data
+$data1 = array();
+while ($row = mysqli_fetch_array($result1)) {
+    $data1[] = array(
+        'Bulan' => $row['BULAN'],
+        'Gaji' => $row['GAJI']
+    );
+}
+
+$data2 = array();
+while ($row = mysqli_fetch_array($result2)) {
+    $data2[] = array(
+        'Bulan' => $row['BULAN'],
+        'Transfer' => $row['TRANSFER']
+    );
+}
+
+// Encode data ke dalam format JSON
+$data1 = json_encode($data1);
+$data2 = json_encode($data2);
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +32,7 @@ require_once "model.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulasi Payroll</title>
     <!-- Load library Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <style>
         canvas {
             padding-left: 0;
@@ -24,6 +44,7 @@ require_once "model.php";
             max-width: 1500px;
         }
     </style>
+
 </head>
 
 <body>
@@ -38,25 +59,29 @@ require_once "model.php";
 
         // Array untuk menyimpan label
         let labels = [];
-
-        // Array untuk menyimpan value (kurva)
+        // Array untuk menyimpan value
         let values1 = [];
         let values2 = [];
 
-        // Object (data)
+        // Object
         let dataSets = [];
 
         // Loop data dan masukkan ke dalam array
+        // Format angka: new Intl.NumberFormat("id-ID").format(bilangan)
+
         data1.forEach(function(datum) {
             labels.push(datum.Bulan);
+            // const val = new Intl.NumberFormat("id-ID").format(datum.Gaji);
             values1.push(datum.Gaji);
         });
 
+
         data2.forEach(function(datum) {
+            // const val = new Intl.NumberFormat("id-ID").format(datum.Transfer);
             values2.push(datum.Transfer);
         });
 
-        const allValue = [values1, values2];
+        const datum = [values1, values2];
         const typeChart = [{
                 type: 'line',
                 labels: 'Gaji'
@@ -64,6 +89,7 @@ require_once "model.php";
             {
                 type: 'bar',
                 labels: 'Transfer'
+
             }
         ];
 
@@ -77,32 +103,34 @@ require_once "model.php";
             }
         ];
 
+        // console.log(labels);
         for (let i = 0; i < 2; i++) {
             dataSets.push({
                 type: typeChart[i].type,
                 label: typeChart[i].labels,
-                data: allValue[i],
+                data: datum[i],
                 borderColor: typeColor[i].border,
                 backgroundColor: typeColor[i].background,
-                fill: true,
                 tension: 0.1
             })
         }
 
-        const lableValue = {
+        // console.log(dataSets);
+        const objLableValue = {
             labels: labels,
             datasets: dataSets
+
         };
 
         // Konfigurasi Grafik
         let ctx = document.getElementById("chartContainer");
         var chart = new Chart(ctx, {
-            type: "scatter",
-            data: lableValue,
+            type: "bar",
+            data: objLableValue,
             options: {
                 scales: {
                     y: {
-                        beginAtZero: false
+                        beginAtZero: true
                     }
                 }
             }
