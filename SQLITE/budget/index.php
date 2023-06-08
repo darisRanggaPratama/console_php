@@ -34,6 +34,7 @@ $result = $db->query($query);
 			background-color: #FF927B;
 		}
 	</style>
+	
 </head>
 
 <body>
@@ -58,11 +59,11 @@ $result = $db->query($query);
 			echo "<br/>";
 		}
 		?>
-		<a href="insert.php" class="addbtn" >Add New</a>
+		<a href="insert.php" class="addbtn">Add New</a>
 		<br>
 		<br>
 		<table id="example" class="table table-bordered" width="100%" cellpadding="5" cellspacing="1" border="1">
-			<caption >Data Payroll</caption>
+			<caption>Data Payroll</caption>
 			<thead>
 				<th style="text-align:center">ID</th>
 				<th style="text-align:center"></th>
@@ -76,7 +77,8 @@ $result = $db->query($query);
 				<th style="text-align:center">TRANSFER</th>
 				<th style="text-align:center">QTY</th>
 				<th style="text-align:center">
-				<img src="icons8_delete.png" alt="edit" style="width:20px;height:20px;"></th>
+					<img src="icons8_delete.png" alt="edit" style="width:20px;height:20px;">
+				</th>
 			</thead>
 			<tbody>
 				<?php while ($row = $result->fetchArray()) { ?>
@@ -84,21 +86,20 @@ $result = $db->query($query);
 						<td style="text-align:center"><?php echo $row['ID']; ?></td>
 						<td style="text-align:center">
 							<a href="update.php?id=<?php echo $row['ID']; ?>" class="btn btn-sm btn-primary">
-							<img src="icons8-edit.png" alt="edit" style="width:15px;height:15px;"></a>
+								<img src="icons8-edit.png" alt="edit" style="width:15px;height:15px;"></a>
 						</td>
-						<td style="text-align:center"><?php echo $row['KODE']; ?></td>
+						<td style="text-align:center"><?php echo $row['KODE'];; ?></td>
 						<td style="text-align:center"><?php echo $row['BLN']; ?></td>
-						<td style="text-align:center"><?php echo $row['GAJI']; ?></td>
-						<td style="text-align:center"><?php echo $row['LEMBUR']; ?></td>
-						<td style="text-align:center"><?php echo $row['TJ_LAIN']; ?></td>
-						<td style="text-align:right"><?php echo $row['BRUTO']; ?></td>
-						<td style="text-align:center"><?php echo $row['POT']; ?></td>
-						<td style="text-align:right"><?php echo $row['TRF']; ?></td>
-						<td style="text-align:center"><?php echo $row['HMN']; ?></td>
+						<td style="text-align:center"><?php echo number_format($row['GAJI'], 0, ",", "."); ?></td>
+						<td style="text-align:center"><?php echo number_format($row['LEMBUR'], 0, ",", "."); ?></td>
+						<td style="text-align:center"><?php echo number_format($row['TJ_LAIN'], 0, ",", "."); ?></td>
+						<td style="text-align:right"><?php echo number_format($row['BRUTO'], 0, ",", "."); ?></td>
+						<td style="text-align:center"><?php echo number_format($row['POT'], 0, ",", "."); ?></td>
+						<td style="text-align:right"><?php echo number_format($row['TRF'], 0, ",", "."); ?></td>
+						<td style="text-align:center"><?php echo number_format($row['HMN'], 0, ",", "."); ?></td>
 						<td style="text-align:right">
-							<a href="index.php?aksi=del&id=<?php echo $row['ID']; ?>" 
-							class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?');">
-							<img src="icons8_del.png" alt="delete" style="width:15px;height:15px;"></a>
+							<a href="index.php?aksi=del&id=<?php echo $row['ID']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?');">
+								<img src="icons8_del.png" alt="delete" style="width:15px;height:15px;"></a>
 							</a>
 						</td>
 					</tr>
