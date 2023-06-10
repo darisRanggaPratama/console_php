@@ -47,7 +47,7 @@ require_once "model.php";
 </head>
 
 <body>
-   
+<h1 style="text-align:center">Payroll Pattern</h1>
     <form action="index.php" method="GET">
         <p style="text-align: center; font-size: 20px; font-weight: bold;">Tahun</p>
         <div class="input-group mb-3">
@@ -112,8 +112,8 @@ require_once "model.php";
             ?>
         </select>
         </div>
-        <br>
-        <br>
+       
+        
         <div style="text-align: center;">
             <input style="text-align:center;" type="submit" class="form-control">
         </div>
@@ -201,6 +201,10 @@ require_once "model.php";
             }
         });
     </script>
+
+<object data="table.php" height="850px" width="100%">
+                Your browser does not support the object tag.
+            </object>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
      
