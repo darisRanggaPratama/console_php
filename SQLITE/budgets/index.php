@@ -40,7 +40,7 @@ $tampil = mysqli_query($connect, $query);
 <body>
 
 	<div style="width: 1000px; margin: 20px auto;">
-		<h1 style="text-align:center">Data Payroll</h1>
+		<h1 style="text-align:center">MYSQL</h1>
 		<?php
 		if (isset($_GET['aksi']) == 'del') {
 			$id = $_GET['id']; // id from url
