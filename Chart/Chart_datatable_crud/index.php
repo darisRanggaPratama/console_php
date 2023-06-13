@@ -26,14 +26,15 @@ require_once "model.php";
             max-width: 1500px;
         }
 
-        form {
+        form,
+        table {
             padding-left: 0;
             padding-right: 0;
             margin-left: auto;
             margin-right: auto;
             display: block;
             width: 100%;
-            max-width: 200px;
+            max-width: 350px;
         }
 
         .txt-blue {
@@ -48,80 +49,101 @@ require_once "model.php";
 
 <body>
     <h1 style="text-align:center">Payroll Pattern</h1>
-    <form action="index.php" method="GET">
-        <p style="text-align: center; font-size: 20px; font-weight: bold;">Year</p>
-        <div class="input-group mb-3">
-            <label for="year1" class="input-group-text">From</label>
-            <select id="year1" name="year1" class="form-select">
-                <?php
-                // Array: year number
-                $year = array(2021, 2022, 2023, 2024, 2025, 2026);
+    <table>
+        <form action="index.php" method="GET">
+            <tr>
+                <td colspan="2">
+                    <p style="text-align: center; font-size: 20px; font-weight: bold;">Year</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="input-group mb-3">
+                        <label for="year1" class="input-group-text">From</label>
+                        <select id="year1" name="year1" class="form-select">
+                            <?php
+                            // Array: year number
+                            $year = array(2021, 2022, 2023, 2024, 2025, 2026);
 
-                // Display year
-                for ($i = 0; $i < sizeof($year); $i++) {
-                    echo "<option class=\"txt-blue\" value=" . $year[$i] . ">$year[$i]</option>";
-                }
-                ?>
-
-            </select>
-        </div>
-        <div class="input-group mb-3">
-            <label for="year2" class="input-group-text">To</label>
-            <select id="year2" name="year2" class="form-select">
-                <?php
-                // Display year
-                for ($i = 0; $i < sizeof($year); $i++) {
-                    echo "<option class=\"txt-red\" value=" . $year[$i] . ">$year[$i]</option>";
-                }
-                ?>
-
-            </select>
-        </div>
-        <p style="text-align: center; font-size: 20px; font-weight: bold;">Month</p>
-        <div class="input-group mb-3">
-            <label for="month1" class="input-group-text">From</label>
-            <select id="month1" name="month1" class="form-select">
-                <?php
-                // Array: month text
-                $month = array(
-                    "01" => "January",
-                    "02" => "February",
-                    "03" => "March",
-                    "04" => "April",
-                    "05" => "May",
-                    "06" => "June",
-                    "07" => "July",
-                    "08" => "August",
-                    "09" => "September",
-                    "10" => "October",
-                    "11" => "November",
-                    "12" => "December"
-                );
-
-                // Display month
-                foreach ($month as $key => $value) {
-                    echo "<option class=\"txt-blue\" value=" . $key . ">$value</option>";
-                }
-                ?>
-
-            </select>
-        </div>
-        <div class="input-group mb-3">
-            <label for="month2" class="input-group-text">To</label>
-            <select id="month2" name="month2" class="form-select">
-                <?php
-                // Display month
-                foreach ($month as $key => $value) {
-                    echo "<option class=\"txt-red\" value=" . $key . ">$value</option>";
-                }
-                ?>
-            </select>
-        </div>
-
-        <div style="text-align: center;">
-            <input style="text-align:center; font-weight: bold;" type="submit" class="form-control">
-        </div>
-    </form>
+                            // Display year
+                            for ($i = 0; $i < sizeof($year); $i++) {
+                                echo "<option class=\"txt-blue\" value=" . $year[$i] . ">$year[$i]</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group mb-3">
+                        <label for="year2" class="input-group-text">To</label>
+                        <select id="year2" name="year2" class="form-select">
+                            <?php
+                            // Display year
+                            for ($i = 0; $i < sizeof($year); $i++) {
+                                echo "<option class=\"txt-red\" value=" . $year[$i] . ">$year[$i]</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p style="text-align: center; font-size: 20px; font-weight: bold;">Month</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="input-group mb-3">
+                        <label for="month1" class="input-group-text">From</label>
+                        <select id="month1" name="month1" class="form-select">
+                            <?php
+                            // Array: month text
+                            $month = array(
+                                "01" => "January",
+                                "02" => "February",
+                                "03" => "March",
+                                "04" => "April",
+                                "05" => "May",
+                                "06" => "June",
+                                "07" => "July",
+                                "08" => "August",
+                                "09" => "September",
+                                "10" => "October",
+                                "11" => "November",
+                                "12" => "December"
+                            );
+                            // Display month
+                            foreach ($month as $key => $value) {
+                                echo "<option class=\"txt-blue\" value=" . $key . ">$value</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group mb-3">
+                        <label for="month2" class="input-group-text">To</label>
+                        <select id="month2" name="month2" class="form-select">
+                            <?php
+                            // Display month
+                            foreach ($month as $key => $value) {
+                                echo "<option class=\"txt-red\" value=" . $key . ">$value</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </td>
+            <tr>
+            <tr>
+                <td colspan="2">
+                    <div style="text-align: center;">
+                        <input style="text-align:center; font-weight: bold;" type="submit" class="form-control">
+                    </div>
+                </td>
+            </tr>
+        </form>
+    </table>
     <br>
     <br>
     <!-- Create canvas to display chart -->
