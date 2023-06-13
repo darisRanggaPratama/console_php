@@ -26,7 +26,6 @@ require_once "model.php";
             max-width: 1500px;
         }
 
-        form,
         table {
             padding-left: 0;
             padding-right: 0;
