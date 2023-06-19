@@ -53,7 +53,7 @@ use Phpoffice\PhpSpreadsheet\Reader\Xlsx;
             echo "<form method='POST' action='import.php'>";
             echo "<input type='hidden' name='namafile' value='" . $nama_file_baru . "' >";
             echo "<div id='kosong' style='color: red; margin-bottom:10px'>
-            Semua data belum diisi, Ada <span id='jumlah_kosog'></span> data belum diisi.
+            Semua data belum diisi, Ada <span id='jumlah_kosong'></span> data belum diisi.
             </div>";
 
             echo "<table border='1' cellpadding='5'>
@@ -83,11 +83,11 @@ use Phpoffice\PhpSpreadsheet\Reader\Xlsx;
                 }
 
                     if ($numrow > 1) {
-                        $nis_td = (!empty(!$nis)) ? "" : " style='background: #E07171;'";
-                        $nama_td = (!empty(!$nama)) ? "" : " style='background: #E07171;'";
-                        $gender_td = (!empty(!$gender)) ? "" : " style='background: #E07171;'";
-                        $telp_td = (!empty(!$telp)) ? "" : " style='background: #E07171;'";
-                        $alamat_td = (!empty(!$alamat)) ? "" : " style='background: #E07171;'";
+                        $nis_td = (!empty($nis)) ? "" : " style='background: #E07171;'";
+                        $nama_td = (!empty($nama)) ? "" : " style='background: #E07171;'";
+                        $gender_td = (!empty($gender)) ? "" : " style='background: #E07171;'";
+                        $telp_td = (!empty($telp)) ? "" : " style='background: #E07171;'";
+                        $alamat_td = (!empty($alamat)) ? "" : " style='background: #E07171;'";
 
                         if ($nis == "" || $nama == "" || $gender =="" || $telp == "" || $alamat == "") {
                             $kosong++;
@@ -97,8 +97,8 @@ use Phpoffice\PhpSpreadsheet\Reader\Xlsx;
                         echo "<td" . $nis_td . ">" . $nis . "</td>";
                         echo "<td" . $nama_td . ">" . $nama . "</td>";
                         echo "<td" . $gender_td . ">" . $gender . "</td>";
-                        echo "<td" . $alamat_td . ">" . $alamat . "</td>";                        
-                        echo "</tr>";
+                        echo "<td" . $telp_td . ">" . $telp . "</td>";
+                        echo "<td" . $alamat_td . ">" . $alamat . "</td>";
                     }
                     $numrow++;
             }
