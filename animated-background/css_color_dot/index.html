@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS FIREFLIES</title>
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        position: relative;
+        background-color: #111;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+      span {
+        position: absolute;
+        pointer-events: none;
+        background-image: linear-gradient(90deg, #1b26ff, #09c6fe);
+        animation: animate 5s ease infinite;
+        border-radius: 50%;
+      }
+      @keyframes animate {
+        0% {
+          transform: scale(0) translateY(0);
+          filter: hue-rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1) translateY(-500%);
+          filter: hue-rotate(360deg);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <script type="text/javascript">
+      function myFunction() {
+        const star = document.createElement("span");
+        const cont = document.querySelector("div");
+        var value = Math.random() * 5;
+
+        star.style.width = value + "px";
+        star.style.height = value + "px";
+
+        star.style.top = Math.random() * innerHeight + "px";
+        star.style.left = Math.random() * innerWidth + "px";
+
+        cont.appendChild(star);
+
+        setTimeout(() => {
+          star.remove();
+        }, 5000);
+      }
+      setInterval(myFunction, 50);
+    </script>
+  </body>
+</html>
