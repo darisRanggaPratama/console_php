@@ -29,11 +29,13 @@ $jumlah_record = $result->num_rows;
     <table class="table table-dark table-hover">
         <thead>
         <tr>
+            <th></th>
             <th>NO</th>
             <th>ID</th>
             <th>Nama</th>
             <th>Umur</th>
             <th>Gender</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -43,11 +45,13 @@ $jumlah_record = $result->num_rows;
             $i = 1;
             while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                 echo "<tr>";
+                echo "<td><a href=\"edit.php?NIS=$row[Nis]\">Edit</a></td>";
                 echo "<td>" . $i++ . "</td>";
                 echo "<td>" . $row['Nis'] . "</td>";
                 echo "<td>" . $row['Nama'] . "</td>";
                 echo "<td>" . $row['Umur'] . "</td>";
                 echo "<td>" . $row['Seks'] . "</td>";
+                echo "<td><a href=\"delete.php?NIS=$row[Nis]\">Delete</a></td>";
                 echo "</tr>";
             }
         } else {
