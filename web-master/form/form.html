@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="form-container">
+    <form action="#" method="post">
+        <h2>Formulir Dinamis</h2>
+        <div class="form-group">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Jenis Kelamin:</label>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="gender" value="male" required>
+                    Laki-laki
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female" required>
+                    Perempuan
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="subscribe">Berlangganan Newsletter:</label>
+            <input type="checkbox" id="subscribe" name="subscribe">
+        </div>
+        <div class="form-group">
+            <button type="submit">Kirim</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
