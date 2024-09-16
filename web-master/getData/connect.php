@@ -22,5 +22,4 @@ try {
     echo "Koneksi gagal: " . $e->getMessage();
     // Anda bisa mencatat kesalahan ke log jika diperlukan
 }
-?>
 
