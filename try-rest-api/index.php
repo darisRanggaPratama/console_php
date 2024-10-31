@@ -5,32 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Avengers</title>
 
-    <!-- CSS Modern DataTables dengan Bootstrap 5 -->
+    <!-- CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap5.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.bootstrap5.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap5.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/select/1.7.0/css/select.bootstrap5.min.css" rel="stylesheet">
 
-    <!-- JavaScript yang diperlukan -->
+    <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.5.0/js/responsive.bootstrap5.min.js"></script>
+
+    <!-- Buttons libraries -->
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+
+    <!-- Select library -->
+    <script src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js"></script>
+
+    <!-- Responsive -->
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/responsive.bootstrap5.min.js"></script>
+
+    <style>
+        /* Style untuk baris yang dipilih */
+        table.dataTable tbody tr.selected {
+            background-color: #b0bed9 !important;
+        }
+        /* Style untuk tombol copy yang disabled */
+        button.buttons-copy.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    </style>
 </head>
 <body>
 <div class="container mt-5">
     <h2 class="mb-4">Data Avengers</h2>
+    <div class="alert alert-info mb-3">
+        Klik baris untuk memilih data yang akan di-copy. Gunakan Ctrl/Cmd + klik untuk memilih multiple baris.
+    </div>
     <table id="tabelData" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
         <thead>
         <tr>
             <th>ID</th>
             <th>Title</th>
             <th>Image</th>
-            <th>Summary</th>
             <th>Release</th>
+            <th>Summary</th>
         </tr>
         </thead>
     </table>
@@ -41,11 +69,7 @@
         let table = $('#tabelData').DataTable({
             ajax: {
                 url: 'data.php',
-                dataSrc: 'data',
-                error: function(xhr, error, thrown) {
-                    console.error('Error:', error);
-                    alert('Terjadi kesalahan saat mengambil data');
-                }
+                dataSrc: 'data'
             },
             columns: [
                 { data: 'id' },
@@ -56,8 +80,8 @@
                         return data ? `<img src="${data}" alt="poster" style="max-height: 50px;">` : 'No Image';
                     }
                 },
-                { data: 'summary' },
-                { data: 'release_at' }
+                { data: 'release_at' },
+                { data: 'summary' }
             ],
             responsive: true,
             language: {
@@ -65,15 +89,51 @@
             },
             processing: true,
             pageLength: 10,
-            order: [[0, 'asc']],
             dom: 'Bfrtip',
-            buttons: ['copy', 'excel', 'pdf', 'print']
+            select: true, // Mengaktifkan fitur select
+            buttons: [
+                {
+                    extend: 'copy',
+                    text: 'Copy',
+                    className: 'btn btn-primary btn-sm',
+                    exportOptions: {
+                        modifier: {
+                            selected: true // Hanya mengambil baris yang dipilih
+                        }
+                    },
+                    init: function(api, node, config) {
+                        // Disable tombol copy saat tidak ada baris yang dipilih
+                        $(node).addClass('disabled');
+                    }
+                },
+                {
+                    extend: 'excel',
+                    text: 'Excel',
+                    className: 'btn btn-success btn-sm'
+                },
+                {
+                    extend: 'pdf',
+                    text: 'PDF',
+                    className: 'btn btn-danger btn-sm'
+                },
+                {
+                    extend: 'print',
+                    text: 'Print',
+                    className: 'btn btn-info btn-sm'
+                }
+            ]
         });
 
-        // Debug: Log data yang diterima
-        table.on('xhr', function() {
-            var json = table.ajax.json();
-            console.log('Data received:', json);
+        // Menangani status tombol copy berdasarkan seleksi
+        table.on('select deselect', function() {
+            let selectedRows = table.rows({ selected: true }).count();
+            let copyButton = $('.buttons-copy');
+
+            if (selectedRows > 0) {
+                copyButton.removeClass('disabled');
+            } else {
+                copyButton.addClass('disabled');
+            }
         });
     });
 </script>
