@@ -1,0 +1,27 @@
+[2024-09-27 09:25:34] Edit.php script started
+[2024-09-27 09:25:34] Received POST request
+[2024-09-27 09:25:34] Received data - ID: tama, Name: rangga pratama, Email: raden@gmail.com, Birth: 2020-01-01
+[2024-09-27 09:25:34] Executing SQL: UPDATE customer SET name = :name, email = :email, birth = :birth WHERE id = :id
+[2024-09-27 09:25:34] Update successful. Rows affected: 1
+[2024-09-27 09:25:34] Edit.php script ended
+[2024-09-27 09:26:00] Edit.php script started
+[2024-09-27 09:26:00] Received POST request
+[2024-09-27 09:26:00] Received data - ID: tama, Name: rangga pratama, Email: raden@gmail.com, Birth: 2020-01-11
+[2024-09-27 09:26:00] Executing SQL: UPDATE customer SET name = :name, email = :email, birth = :birth WHERE id = :id
+[2024-09-27 09:26:00] Update successful. Rows affected: 1
+[2024-09-27 09:26:00] Edit.php script ended
+[2024-09-27 09:26:16] Edit.php script started
+[2024-09-27 09:26:16] Invalid request method: GET
+[2024-09-27 09:26:16] Edit.php script ended
+[2024-09-27 09:26:17] Edit.php script started
+[2024-09-27 09:26:17] Invalid request method: GET
+[2024-09-27 09:26:17] Edit.php script ended
+[2024-09-27 09:26:18] Edit.php script started
+[2024-09-27 09:26:18] Invalid request method: GET
+[2024-09-27 09:26:18] Edit.php script ended
+[2024-09-27 09:52:17] Edit.php script started
+[2024-09-27 09:52:17] Received POST request
+[2024-09-27 09:52:17] Received data - ID: rad, Name: tamagochi, Email: rangga@outlook.com, Birth: 2020-01-01
+[2024-09-27 09:52:17] Executing SQL: UPDATE customer SET name = :name, email = :email, birth = :birth WHERE id = :id
+[2024-09-27 09:52:17] Update successful. Rows affected: 0
+[2024-09-27 09:52:17] Edit.php script ended

@@ -1,0 +1,171 @@
+[2024-09-26 18:57:54] API called
+[2024-09-26 18:57:54] Attempting to connect to database: java_database
+[2024-09-26 18:57:54] Connected to database successfully
+[2024-09-26 18:57:54] Received data - ID: _, Nama: _, _, Tanggal: _
+[2024-09-26 18:57:54] Preparing SQL statement: INSERT INTO customer (id, name, email, birth) VALUES (?, ?, ?, ?)
+[2024-09-26 18:57:54] Statement prepared successfully
+[2024-09-26 18:57:54] Binding parameters: id=_, nama=_, _ tanggal=_
+[2024-09-26 18:57:54] Parameters bound to statement successfully
+[2024-09-26 18:58:01] API called
+[2024-09-26 18:58:01] Attempting to connect to database: java_database
+[2024-09-26 18:58:01] Connected to database successfully
+[2024-09-26 18:58:01] Received data - ID: test, Nama: test, , Tanggal: 2024-09-25
+[2024-09-26 18:58:01] Validation failed: Empty fields
+[2024-09-26 18:58:07] API called
+[2024-09-26 18:58:07] Attempting to connect to database: java_database
+[2024-09-26 18:58:07] Connected to database successfully
+[2024-09-26 18:58:07] Received data - ID: _, Nama: _, _, Tanggal: _
+[2024-09-26 18:58:07] Preparing SQL statement: INSERT INTO customer (id, name, email, birth) VALUES (?, ?, ?, ?)
+[2024-09-26 18:58:07] Statement prepared successfully
+[2024-09-26 18:58:07] Binding parameters: id=_, nama=_, _ tanggal=_
+[2024-09-26 18:58:07] Parameters bound to statement successfully
+[2024-09-26 18:58:08] API called
+[2024-09-26 18:58:08] Attempting to connect to database: java_database
+[2024-09-26 18:58:08] Connected to database successfully
+[2024-09-26 18:58:08] Received data - ID: _, Nama: _, _, Tanggal: _
+[2024-09-26 18:58:08] Preparing SQL statement: INSERT INTO customer (id, name, email, birth) VALUES (?, ?, ?, ?)
+[2024-09-26 18:58:08] Statement prepared successfully
+[2024-09-26 18:58:08] Binding parameters: id=_, nama=_, _ tanggal=_
+[2024-09-26 18:58:08] Parameters bound to statement successfully
+[2024-09-26 18:58:08] API called
+[2024-09-26 18:58:08] Attempting to connect to database: java_database
+[2024-09-26 18:58:08] Connected to database successfully
+[2024-09-26 18:58:08] Received data - ID: _, Nama: _, _, Tanggal: _
+[2024-09-26 18:58:08] Preparing SQL statement: INSERT INTO customer (id, name, email, birth) VALUES (?, ?, ?, ?)
+[2024-09-26 18:58:08] Statement prepared successfully
+[2024-09-26 18:58:08] Binding parameters: id=_, nama=_, _ tanggal=_
+[2024-09-26 18:58:08] Parameters bound to statement successfully
+[2024-09-26 18:58:08] API called
+[2024-09-26 18:58:08] Attempting to connect to database: java_database
+[2024-09-26 18:58:08] Connected to database successfully
+[2024-09-26 18:58:08] Received data - ID: _, Nama: _, _, Tanggal: _
+[2024-09-26 18:58:08] Preparing SQL statement: INSERT INTO customer (id, name, email, birth) VALUES (?, ?, ?, ?)
+[2024-09-26 18:58:08] Statement prepared successfully
+[2024-09-26 18:58:08] Binding parameters: id=_, nama=_, _ tanggal=_
+[2024-09-26 18:58:08] Parameters bound to statement successfully
+[2024-09-26 18:58:16] API called
+[2024-09-26 18:58:16] Attempting to connect to database: java_database
+[2024-09-26 18:58:16] Connected to database successfully
+[2024-09-26 18:58:16] Received data - ID: test, Nama: tes, es, Tanggal: 2024-09-25
+[2024-09-26 18:58:16] Preparing SQL statement: INSERT INTO customer (id, name, email, birth) VALUES (?, ?, ?, ?)
+[2024-09-26 18:58:16] Statement prepared successfully
+[2024-09-26 18:58:16] Binding parameters: id=test, nama=tes, es tanggal=2024-09-25
+[2024-09-26 18:58:16] Parameters bound to statement successfully
+[2024-09-26 18:58:16] Query executed successfully. Affected rows: 1
+[2024-09-26 18:58:16] Statement and connection closed
+[2024-09-26 18:58:21] API called
+[2024-09-26 18:58:21] Attempting to connect to database: java_database
+[2024-09-26 18:58:21] Connected to database successfully
+[2024-09-26 18:58:21] Received data - ID: _, Nama: _, _, Tanggal: _
+[2024-09-26 18:58:21] Preparing SQL statement: INSERT INTO customer (id, name, email, birth) VALUES (?, ?, ?, ?)
+[2024-09-26 18:58:21] Statement prepared successfully
+[2024-09-26 18:58:21] Binding parameters: id=_, nama=_, _ tanggal=_
+[2024-09-26 18:58:21] Parameters bound to statement successfully
+[2024-09-26 18:58:28] API called
+[2024-09-26 18:58:28] Attempting to connect to database: java_database
+[2024-09-26 18:58:28] Connected to database successfully
+[2024-09-26 18:58:28] Received data - ID: _, Nama: _, _, Tanggal: _
+[2024-09-26 18:58:28] Preparing SQL statement: INSERT INTO customer (id, name, email, birth) VALUES (?, ?, ?, ?)
+[2024-09-26 18:58:28] Statement prepared successfully
+[2024-09-26 18:58:28] Binding parameters: id=_, nama=_, _ tanggal=_
+[2024-09-26 18:58:28] Parameters bound to statement successfully
+[2024-09-27 04:32:15] Get Data API called
+[2024-09-27 04:32:15] Connected to database successfully
+[2024-09-27 04:32:15] Data retrieved successfully. Row count: 29
+[2024-09-27 04:32:15] Connection closed
+[2024-09-27 04:33:20] Get Data API called
+[2024-09-27 04:33:20] Connected to database successfully
+[2024-09-27 04:33:20] Data retrieved successfully. Row count: 29
+[2024-09-27 04:33:20] Connection closed
+[2024-09-27 04:33:24] Get Data API called
+[2024-09-27 04:33:24] Connected to database successfully
+[2024-09-27 04:33:24] Data retrieved successfully. Row count: 29
+[2024-09-27 04:33:24] Connection closed
+[2024-09-27 04:33:24] Get Data API called
+[2024-09-27 04:33:24] Connected to database successfully
+[2024-09-27 04:33:24] Data retrieved successfully. Row count: 29
+[2024-09-27 04:33:24] Connection closed
+[2024-09-27 04:34:14] Get Data API called
+[2024-09-27 04:34:14] Connected to database successfully
+[2024-09-27 04:34:14] Data retrieved successfully. Row count: 29
+[2024-09-27 04:34:14] Connection closed
+[2024-09-27 04:34:53] Get Data API called
+[2024-09-27 04:34:53] Connected to database successfully
+[2024-09-27 04:34:53] Data retrieved successfully. Row count: 29
+[2024-09-27 04:34:53] Connection closed
+[2024-09-27 04:39:22] API called
+[2024-09-27 04:39:22] Attempting to connect to database: java_database
+[2024-09-27 04:39:22] Connected to database successfully
+[2024-09-27 04:39:22] Received data - ID: rad, Nama: raden, raden@gmail.com, Tanggal: 2024-09-01
+[2024-09-27 04:39:22] Preparing SQL statement: INSERT INTO customer (id, name, email, birth) VALUES (?, ?, ?, ?)
+[2024-09-27 04:39:22] Statement prepared successfully
+[2024-09-27 04:39:22] Binding parameters: id=rad, nama=raden, raden@gmail.com tanggal=2024-09-01
+[2024-09-27 04:39:22] Parameters bound to statement successfully
+[2024-09-27 04:39:22] Query executed successfully. Affected rows: 1
+[2024-09-27 04:39:22] Statement and connection closed
+[2024-09-27 04:39:25] Get Data API called
+[2024-09-27 04:39:25] Connected to database successfully
+[2024-09-27 04:39:25] Data retrieved successfully. Row count: 30
+[2024-09-27 04:39:25] Connection closed
+[2024-09-27 04:39:38] Get Data API called
+[2024-09-27 04:39:38] Connected to database successfully
+[2024-09-27 04:39:38] Data retrieved successfully. Row count: 30
+[2024-09-27 04:39:38] Connection closed
+[2024-09-27 04:39:40] Get Data API called
+[2024-09-27 04:39:40] Connected to database successfully
+[2024-09-27 04:39:40] Data retrieved successfully. Row count: 30
+[2024-09-27 04:39:40] Connection closed
+[2024-09-27 04:44:04] Get Data API called
+[2024-09-27 04:44:04] Connected to database successfully
+[2024-09-27 04:44:04] Data retrieved successfully. Row count: 30
+[2024-09-27 04:44:04] Connection closed
+[2024-09-27 05:36:50] Get Data API called
+[2024-09-27 05:36:50] Connected to database successfully
+[2024-09-27 05:36:50] Data retrieved successfully. Row count: 30
+[2024-09-27 05:36:50] Connection closed
+[2024-09-27 05:37:12] Get Data API called
+[2024-09-27 05:37:12] Connected to database successfully
+[2024-09-27 05:37:12] Data retrieved successfully. Row count: 30
+[2024-09-27 05:37:12] Connection closed
+[2024-09-27 05:47:19] Get Data API called
+[2024-09-27 05:47:19] Connected to database successfully
+[2024-09-27 05:47:19] Data retrieved successfully. Row count: 27
+[2024-09-27 05:47:19] Connection closed
+[2024-09-27 05:47:37] Get Data API called
+[2024-09-27 05:47:37] Connected to database successfully
+[2024-09-27 05:47:37] Data retrieved successfully. Row count: 26
+[2024-09-27 05:47:37] Connection closed
+[2024-09-27 06:50:47] Get Data API called
+[2024-09-27 06:50:47] Connected to database successfully
+[2024-09-27 06:50:47] Data retrieved successfully. Row count: 26
+[2024-09-27 06:50:47] Connection closed
+[2024-09-27 06:51:30] API called
+[2024-09-27 06:51:30] Attempting to connect to database: java_database
+[2024-09-27 06:51:30] Connected to database successfully
+[2024-09-27 06:51:30] Received data - ID: rdn, Nama: raden, raden@yahoo.com, Tanggal: 2024-09-30
+[2024-09-27 06:51:30] Preparing SQL statement: INSERT INTO customer (id, name, email, birth) VALUES (?, ?, ?, ?)
+[2024-09-27 06:51:30] Statement prepared successfully
+[2024-09-27 06:51:30] Binding parameters: id=rdn, nama=raden, raden@yahoo.com tanggal=2024-09-30
+[2024-09-27 06:51:30] Parameters bound to statement successfully
+[2024-09-27 06:51:30] Query executed successfully. Affected rows: 1
+[2024-09-27 06:51:30] Statement and connection closed
+[2024-09-27 06:51:35] Get Data API called
+[2024-09-27 06:51:35] Connected to database successfully
+[2024-09-27 06:51:35] Data retrieved successfully. Row count: 27
+[2024-09-27 06:51:35] Connection closed
+[2024-09-27 06:51:46] Get Data API called
+[2024-09-27 06:51:46] Connected to database successfully
+[2024-09-27 06:51:46] Data retrieved successfully. Row count: 27
+[2024-09-27 06:51:46] Connection closed
+[2024-09-27 06:52:19] Get Data API called
+[2024-09-27 06:52:19] Connected to database successfully
+[2024-09-27 06:52:19] Data retrieved successfully. Row count: 27
+[2024-09-27 06:52:19] Connection closed
+[2024-09-27 06:54:10] Get Data API called
+[2024-09-27 06:54:10] Connected to database successfully
+[2024-09-27 06:54:10] Data retrieved successfully. Row count: 27
+[2024-09-27 06:54:10] Connection closed
+[2024-09-27 06:54:38] Get Data API called
+[2024-09-27 06:54:38] Connected to database successfully
+[2024-09-27 06:54:38] Data retrieved successfully. Row count: 26
+[2024-09-27 06:54:38] Connection closed
