@@ -1,9 +1,9 @@
 <?php
 class Database {
     private $host = "localhost";
-    private $database = "hyvoycom_avengers";
-    private $username = "hyvoycom_rangga";
-    private $password = "20061988rangga";
+    private $database = "avengers";
+    private $username = "rangga";
+    private $password = "rangga";
     private $conn;
 
     public function getConnection() {
