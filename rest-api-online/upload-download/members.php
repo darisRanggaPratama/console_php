@@ -3,7 +3,7 @@ require_once 'config.php';
 
 class Members {
     private $conn;
-    private string $table_name = "members";
+    private $table_name = "members";
 
     public function __construct() {
         $database = new Database();

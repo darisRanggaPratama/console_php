@@ -4,7 +4,7 @@ require_once 'members.php';
 
 $members = new Members();
 
-$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
+$action = $_REQUEST['action'] ?? '';
 
 switch($action) {
     case 'getAll':

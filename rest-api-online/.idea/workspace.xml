@@ -4,43 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d7e7e1f-9026-4ace-948f-b05b7441b9b2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../rest-api-offline/.idea/try-rest-api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connects.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rest-api-trial.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rest-api-trial/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rest-api-trial/connects.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rest-api-trial/data.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rest-api-trial/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rest-api-trial/upload-download/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rest-api-trial/upload-download/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rest-api-trial/upload-download/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rest-api-trial/upload-download/members.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rest-api-trial/upload-download/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/.idea/try-rest-api.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/connect.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/connects.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/crud/api.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/crud/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/crud/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/data.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/upload-download/api.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/upload-download/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/upload-download/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/upload-download/members.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/upload-download/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/upload_download/api.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/upload_download/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/upload_download/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/upload_download/members.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/upload_download/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../try-rest-api/view.php" beforeDir="false" />
+    <list default="true" id="46d0e1e9-ec84-42fe-bb1d-916512f6142e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../rest-api-offline.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rest-api-online.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/rest-api-online.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connect.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connects.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload-download/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload-download/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload-download/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/upload-download/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload-download/members.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload-download/members.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload-download/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/upload-download/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload_download/api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload_download/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload_download/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload_download/members.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload_download/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api-trial.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api-trial/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api-trial/connects.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api-trial/data.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api-trial/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api-trial/upload-download/api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api-trial/upload-download/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api-trial/upload-download/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api-trial/upload-download/members.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api-trial/upload-download/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../try-rest-api.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,22 +45,15 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
-  <component name="ProjectId" id="2oBKYeo4ErXCj17VGJp5wmsixhZ" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2oHmvD36l62dbNKPgATnEOvjt7R" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -77,31 +65,20 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/laragon/www/console_php/rest-api-offline",
+    "last_opened_file_path": "C:/laragon/www/console_php/rest-api-online",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\console_php\try-rest-api\upload-download" />
-    </key>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -112,16 +89,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0d7e7e1f-9026-4ace-948f-b05b7441b9b2" name="Changes" comment="" />
-      <created>1730337577409</created>
+      <changelist id="46d0e1e9-ec84-42fe-bb1d-916512f6142e" name="Changes" comment="" />
+      <created>1730535104103</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1730337577409</updated>
-      <workItem from="1730337578463" duration="12039000" />
-      <workItem from="1730425245908" duration="5611000" />
-      <workItem from="1730480089173" duration="259000" />
-      <workItem from="1730480372368" duration="6842000" />
-      <workItem from="1730491645071" duration="29000" />
+      <updated>1730535104103</updated>
+      <workItem from="1730535105169" duration="521000" />
     </task>
     <servers />
   </component>

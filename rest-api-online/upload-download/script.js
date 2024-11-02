@@ -11,13 +11,6 @@ $(document).ready(function() {
         },
         columns: [
             { data: 'id' },
-            {
-                data: null,
-                render: function(data) {
-                    return `
-                        <button class="btn btn-sm btn-warning" onclick="editMember(${data.id})">Edit</button>`;
-                }
-            },
             { data: 'title' },
             {
                 data: 'image',
@@ -30,8 +23,10 @@ $(document).ready(function() {
             {
                 data: null,
                 render: function(data) {
-                    return `                      
-                        <button class="btn btn-sm btn-danger" onclick="deleteMember(${data.id})">Delete</button>`;
+                    return `
+                        <button class="btn btn-sm btn-warning" onclick="editMember(${data.id})">Edit</button>
+                        <button class="btn btn-sm btn-danger" onclick="deleteMember(${data.id})">Delete</button>
+                    `;
                 }
             }
         ]
