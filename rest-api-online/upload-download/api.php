@@ -1,11 +1,10 @@
 <?php
 header('Content-Type: application/json');
-require_once 'Members.php';
+require_once 'members.php';
 
 $members = new Members();
 
 $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
-//$action = $_REQUEST['action'] ?? '';
 
 switch($action) {
     case 'getAll':
@@ -31,6 +30,10 @@ switch($action) {
 
     case 'export':
         $members->exportCSV();
+        break;
+
+    case 'downloadTemplate':
+        $members->downloadTemplate();
         break;
 
     case 'import':

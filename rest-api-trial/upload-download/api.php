@@ -1,10 +1,10 @@
 <?php
 header('Content-Type: application/json');
-require_once 'Members.php';
+require_once 'members.php';
 
 $members = new Members();
 
-$action = $_REQUEST['action'] ?? '';
+$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 
 switch($action) {
     case 'getAll':

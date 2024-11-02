@@ -3,7 +3,7 @@ require_once 'config.php';
 
 class Members {
     private $conn;
-    private $table_name = "members";
+    private string $table_name = "members";
 
     public function __construct() {
         $database = new Database();
@@ -100,24 +100,49 @@ class Members {
 
     public function importCSV($file) {
         if (($handle = fopen($file['tmp_name'], "r")) !== FALSE) {
-            // Skip header row
-            fgetcsv($handle, 1000, ";");
+            try {
+                // Skip header row
+                fgetcsv($handle, 1000, ";");
 
-            while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
-                $query = "INSERT INTO " . $this->table_name . " 
-                        (title, image, release_at, summary) 
-                        VALUES (:title, :image, :release_at, :summary)";
+                $this->conn->beginTransaction();
 
-                $stmt = $this->conn->prepare($query);
-                $stmt->execute([
-                    ':title' => $data[1],
-                    ':image' => $data[2],
-                    ':release_at' => $data[3],
-                    ':summary' => $data[4]
-                ]);
+                while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
+                    // Convert date format from MM/DD/YYYY to YYYY-MM-DD
+                    $release_date = $data[3];
+                    if (strpos($release_date, '/') !== false) {
+                        $date_parts = explode('/', $release_date);
+                        if (count($date_parts) === 3) {
+                            // Assuming date format is MM/DD/YYYY
+                            $month = $date_parts[0];
+                            $day = $date_parts[1];
+                            $year = $date_parts[2];
+                            $release_date = sprintf('%04d-%02d-%02d', $year, $month, $day);
+                        }
+                    }
+
+                    $query = "INSERT INTO " . $this->table_name . " 
+                            (title, image, release_at, summary) 
+                            VALUES (:title, :image, :release_at, :summary)";
+
+                    $stmt = $this->conn->prepare($query);
+                    $stmt->execute([
+                        ':title' => $data[1],
+                        ':image' => $data[2],
+                        ':release_at' => $release_date,
+                        ':summary' => $data[4]
+                    ]);
+                }
+
+                $this->conn->commit();
+                fclose($handle);
+                return true;
+
+            } catch (Exception $e) {
+                $this->conn->rollBack();
+                fclose($handle);
+                error_log("CSV Import Error: " . $e->getMessage());
+                return false;
             }
-            fclose($handle);
-            return true;
         }
         return false;
     }
